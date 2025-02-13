@@ -248,6 +248,10 @@ h6 {
     left: 0;
     border-color: var(--dark-grey-color);
 }
+.text-custom {
+    color: #d9762d !important;
+}
+
 
 .play-btn {
     width: 100px;
