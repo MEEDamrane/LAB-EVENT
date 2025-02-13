@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27" height="20" viewBox="0 0 27 20">
+  <g id="music" transform="translate(-2 -4.074)">
+    <path id="Path_8" data-name="Path 8" d="M29.5,11.619a3.6,3.6,0,0,0-2-2.424,12.019,12.019,0,0,1-4.3-4.012l-.4-.669A1.086,1.086,0,0,0,21.7,4.1a.718.718,0,0,0-.7.752V18.056a6.727,6.727,0,0,0-3-.669c-2.8,0-5,1.5-5,3.344s2.2,3.344,5,3.344,5-1.5,5-3.344V7.857a16.375,16.375,0,0,0,3.4,2.675,2.035,2.035,0,0,1,.7,3.093.749.749,0,0,0,.3,1.17,1.1,1.1,0,0,0,1.4-.251A3.223,3.223,0,0,0,29.5,11.619Z" transform="translate(-0.616 0)" fill="#fff"/>
+    <path id="Path_9" data-name="Path 9" d="M10,25H3a1,1,0,0,0,0,2h7a1,1,0,0,0,0-2Z" transform="translate(0 -3.925)" fill="#fff"/>
+    <path id="Path_10" data-name="Path 10" d="M10,20H3a1,1,0,0,0,0,2h7a1,1,0,0,0,0-2Z" transform="translate(0 -2.851)" fill="#fff"/>
+    <path id="Path_11" data-name="Path 11" d="M3,17H17a1,1,0,0,0,0-2H3a1,1,0,0,0,0,2Z" transform="translate(0 -1.956)" fill="#fff"/>
+    <path id="Path_12" data-name="Path 12" d="M3,12H17a.945.945,0,0,0,1-1,.945.945,0,0,0-1-1H3a.945.945,0,0,0-1,1A.945.945,0,0,0,3,12Z" transform="translate(0 -1.061)" fill="#fff"/>
+    <path id="Path_13" data-name="Path 13" d="M3,7H17a.945.945,0,0,0,1-1,.945.945,0,0,0-1-1H3A.945.945,0,0,0,2,6,.945.945,0,0,0,3,7Z" fill="#fff"/>
+  </g>
+</svg>
