@@ -26,6 +26,69 @@
 
     <!-- Main Style CSS Link -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .accordion {
+            max-width: 100%;
+            margin: 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .accordion-title {
+            background-color: #f8f8f8;
+            padding: 15px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .accordion-title:hover {
+            background-color: #eaeaea;
+        }
+
+        .accordion-content {
+            display: none;
+            padding: 15px;
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+        }
+
+        .accordion-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .accordion-content li {
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .accordion-content li:last-child {
+            border-bottom: none;
+        }
+
+        .plus-sign {
+            font-size: 22px;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .rotated {
+            transform: rotate(45deg);
+        }
+    </style>
 </head>
 
 <body>
@@ -256,6 +319,100 @@
                             </p>
 
                             <p><b>A comprehensive two-day program will focus on the following four key areas, and the papers may include, but are not limited to, the following topics:</b></p>
+                        </div>
+                        <div class="accordion">
+                            <div class="accordion-title" onclick="toggleAccordion(this)">
+                                Electrical and Electronic Engineering
+                                <span class="plus-sign">+</span>
+                            </div>
+                            <div class="accordion-content">
+                                <ul>
+                                    <li>Electrical and electronic engineering</li>
+                                    <li>Power Electronics and Applications</li>
+                                    <li>Electronics Devices, Circuits and Systems</li>
+                                    <li>Nanotechnology and Microelectronics</li>
+                                    <li>Quantum Computing and Electronics</li>
+                                    <li>Optoelectronics and Photonics</li>
+                                    <li>RF, Microwaves, Wireless and Optical Communication</li>
+                                    <li>Robotics, Control, Automation and Instrumentation</li>
+                                    <li>Signal Processing and Audio/Video Applications</li>
+                                    <li>Wireless Communication Technologies</li>
+                                    <li>5G and 6G Technology</li>
+                                    <li>Smart Sensors and Environmental Monitoring Devices</li>
+                                    <li>Electronic Systems Security and Data Protection</li>
+                                    <li>Electromagnetic Wave Propagation in Advanced Materials</li>
+                                    <li>Artificial Intelligence in Electronics Design</li>
+                                    <li>Artificial Intelligence, Embedded Systems, Machine Learning and IoT</li>
+                                    <li>Smart Grids and Energy Distribution</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="accordion">
+                            <div class="accordion-title" onclick="toggleAccordion(this)">
+                                Renewable energy systems and energy storage
+                                <span class="plus-sign">+</span>
+                            </div>
+                            <div class="accordion-content">
+                                <ul>
+                                    <li>Renewable Energy Technologies (Photovoltaic, Wind, Hydrogen, Hydropower, Geothermal, Biomass. etc)</li>
+                                    <li>Energy Storage Systems (Batteries, Supercapacitors, etc.)</li>
+                                    <li>Hybrid Energy Systems</li>
+                                    <li>Thermal energy</li>
+                                    <li>Renewable Energy Transition</li>
+                                    <li>Smart Grids</li>
+                                    <li>Electrification of Transport Systems</li>
+                                    <li>Green Building Technologies and Energy Efficiency</li>
+                                    <li>Ocean Energy and Tidal Power Systems</li>
+                                    <li>Artificial Intelligence and Machine Learning for Energy Optimization</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="accordion">
+                            <div class="accordion-title" onclick="toggleAccordion(this)">
+                                Environmental Technology and sustainable practices
+                                <span class="plus-sign">+</span>
+                            </div>
+                            <div class="accordion-content">
+                                <ul>
+                                    <li>Environmental Remote Sensing Applications</li>
+                                    <li>Air Pollution and Treatment</li>
+                                    <li>Water and Waste Treatment</li>
+                                    <li>Water desalination</li>
+                                    <li>Decarbonization Technologies</li>
+                                    <li>Decarbonization Strategies</li>
+                                    <li>Environmental Education</li>
+                                    <li>Climate Change Adaption and Resilience</li>
+                                    <li>Energy Efficiency and Best Practices</li>
+                                    <li>Sustainable Cities, Infrastructure, and Transportation</li>
+                                    <li>Green Building and Design</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="accordion">
+                            <div class="accordion-title" onclick="toggleAccordion(this)">
+                                Materials and applications
+                                <span class="plus-sign">+</span>
+                            </div>
+                            <div class="accordion-content">
+                                <ul>
+                                    <li>Electrical and electronic engineering</li>
+                                    <li>Advanced materials synthesis and characterization techniques</li>
+                                    <li>Nanomaterials and nanotechnology applications</li>
+                                    <li>Biomaterials and biomedical applications</li>
+                                    <li>Functional materials for energy storage and conversion</li>
+                                    <li>DFT and TDFT application in hydrogen storage and solar cell</li>
+                                    <li>Structural materials and their applications in engineering</li>
+                                    <li>Sustainable materials and green manufacturing processes</li>
+                                    <li>Composite materials and their multifunctional applications</li>
+                                    <li>Organic materials, polymers and inorganic materials and their applications</li>
+                                    <li>Smart materials and their applications in sensors and actuators</li>
+                                    <li>Materials for water treatment</li>
+                                    <li>Materials and agriculture</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1246,6 +1403,21 @@
         </div>
     </footer>
     <!-- Footer End -->
+
+    <script>
+        function toggleAccordion(element) {
+            let content = element.nextElementSibling;
+            let plusSign = element.querySelector('.plus-sign');
+
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                plusSign.classList.remove("rotated");
+            } else {
+                content.style.display = "block";
+                plusSign.classList.add("rotated");
+            }
+        }
+    </script>
 
     <!-- Scroll To Top -->
     <a href="#main-banner" id="scrollToTop" class="scrolltop" title="Back To Top" style="display: none;"><i class="fas fa-angle-double-up"></i></a>
