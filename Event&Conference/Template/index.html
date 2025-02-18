@@ -88,6 +88,9 @@
         .rotated {
             transform: rotate(45deg);
         }
+        .important-dates {
+            font-size: 25px;
+        }
     </style>
 </head>
 
@@ -265,30 +268,47 @@
         <div class="sec-wp">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12 text-lg-center">
+                    <div class="col-lg-12 text-center">
                         <div class="info-text-wp">
                             <h3 class="h3-title wow fadeup-animation" data-wow-duration="1s">Save the day</h3>
-                            <h2 class="h2-title wow fadeup-animation" data-wow-duration="1.2s">ONLY FEW SEATS LEFT BOOK NOW</h2>
+                            <h2 class="h2-title wow fadeup-animation" data-wow-duration="1.2s">Conference Dates: 11-12 December 2025</h2>
+    
+                            <!-- Conference Dates Countdown -->
                             <div class="info-count-down-box-wp wow fadeup-animation" data-wow-duration="1.4s">
-                                <div class="box">
-                                    <span class="time">204</span>
-                                    <span class="days"><span>Days</span></span>
-                                </div>
-                                <div class="box">
-                                    <span class="time">02</span>
-                                    <span class="days"><span>Hours</span></span>
-                                </div>
-                                <div class="box">
-                                    <span class="time">53</span>
-                                    <span class="days"><span>Minutes</span></span>
-                                </div>
-                                <div class="box">
-                                    <span class="time">53</span>
-                                    <span class="days"><span>Seconds</span></span>
+                                <div class="countdown-timer d-flex justify-content-center">
+                                    <div class="box ">
+                                        <span id="days" class="time">00</span>
+                                        <span class="days"> <span>Days</span></span>
+                                    </div>
+                                    <div class="box mx-2">
+                                        <span id="hours" class="time">00</span>
+                                        <span class="days"><span>Hours</span></span>
+                                    </div>
+                                    <div class="box mx-2">
+                                        <span id="minutes" class="time">00</span>
+                                        <span class="days"><span>Minutes</span></span>
+                                    </div>
+                                    <div class="box mx-2">
+                                        <span id="seconds" class="time">00</span>
+                                        <span class="days"><span>Seconds</span></span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="info-text-btn wow fadeup-animation" data-wow-duration="1.6s">
-                                <a href="javascript:void(0)" class="sec-btn" title="Register Now">Register Now</a>
+    
+                            <div class="important-dates wow fadeup-animation mt-5 p-4 rounded shadow-lg" data-wow-duration="1.6s">
+                                <h3 class="h3-title mb-3 fw-bold text-center">Important Dates</h3>
+                                <ul class="list-unstyled text-light fs-5">
+                                    <li><strong>Abstract Submission Deadline:</strong> 1st September 2025</li>
+                                    <li><strong>Full Paper Submission Deadline:</strong> 1st October 2025</li>
+                                    <li><strong>Notification of Acceptance:</strong> 15th October 2025</li>
+                                    <li><strong>Publication of the Program:</strong> 15th November 2025</li>
+                                </ul>
+                            </div>
+
+    
+                            <!-- Register Button -->
+                            <div class="info-text-btn wow fadeup-animation mt-4" data-wow-duration="1.8s">
+                                <a href="javascript:void(0)" class="sec-btn btn-gradient" title="Register Now">Register Now</a>
                             </div>
                         </div>
                     </div>
@@ -427,31 +447,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-4">
                         <div class="sec-title wow left-animation" data-wow-duration="1s">
-                            <h2 class="h2-title">Our Big Event</h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-8">
-                        <div class="event-accordion-tab wow right-animation" data-wow-duration="1s">
-                            <ul class="nav nav-tabs">
-                                <li class="nav-item">
-                                    <a href="#musicEvent" title="Musical Event" class="nav-link active" data-toggle="tab">
-                                        <img src="assets/images/svg/music.svg" alt="Music" width="27" height="20">
-                                        <h4>Musical <span>Event</span></h4>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#playEvent" title="Play Event" class="nav-link" data-toggle="tab">
-                                        <img src="assets/images/svg/play-cricket.svg" alt="Music" width="25" height="20">
-                                        <h4>Play <span>Event</span></h4>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#conferenceEvent" title="Conference Event" class="nav-link" data-toggle="tab">
-                                        <img src="assets/images/svg/mike.svg" alt="Music" width="20" height="28">
-                                        <h4>Conference <span>Event</span></h4>
-                                    </a>
-                                </li>
-                            </ul>
+                            <h2 class="h2-title">Our Speakers</h2>
                         </div>
                     </div>
                 </div>
@@ -781,7 +777,7 @@
     <!-- End Event -->
 
     <!-- Video Start -->
-    <div class="video-sec">
+ <!--    <div class="video-sec">
         <div class="sec-wp">
             <div class="container">
                 <div class="row">
@@ -801,7 +797,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- End Video -->
 
     <!-- Speakers Start -->
@@ -1418,6 +1414,42 @@
             }
         }
     </script>
+
+    <script>
+        // Set the conference date we're counting down to
+        const conferenceDate = new Date("December 11, 2025 00:00:00").getTime();
+    
+        // Update the countdown every 1 second
+        const countdownInterval = setInterval(function() {
+            // Get today's date and time
+            const now = new Date().getTime();
+    
+            // Find the distance between now and the conference date
+            const distance = conferenceDate - now;
+    
+            // Time calculations for days, hours, minutes, and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+            // Output the result in the elements with the corresponding IDs
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+    
+            // If the countdown is over, stop it
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("days").innerHTML = "0";
+                document.getElementById("hours").innerHTML = "0";
+                document.getElementById("minutes").innerHTML = "0";
+                document.getElementById("seconds").innerHTML = "0";
+            }
+        }, 1000);
+    </script>
+    
 
     <!-- Scroll To Top -->
     <a href="#main-banner" id="scrollToTop" class="scrolltop" title="Back To Top" style="display: none;"><i class="fas fa-angle-double-up"></i></a>
