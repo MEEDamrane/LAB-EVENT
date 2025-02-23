@@ -26,6 +26,13 @@
 
     <!-- Main Style CSS Link -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -91,11 +98,40 @@
         .important-dates {
             font-size: 25px;
         }
+        .h2-t {
+            color: white;
+            text-transform: uppercase;
+            font-size: clamp(1.5rem, 4vw, 2.5rem); /* Scales with screen size */
+          }
+
+          @media (max-width: 600px) {
+            .h2-t {
+              font-size: 1.8rem;
+            }
+          }
+          
+          .h2-t mark {
+            color: white;
+            background: none;
+            text-decoration: underline;
+            font-weight: bold;
+          }
+          
+          .h2-t mark:nth-of-type(1) {
+            text-decoration-color: #ffcc00;
+          }
+          
+          .h2-t mark:nth-of-type(2) {
+            text-decoration-color: red;
+          }
+          
+          .h2-t mark:nth-of-type(3) {
+            text-decoration-color: green;
+          }
     </style>
 </head>
 
 <body>
-
     <!-- Loader Start -->
     <div class="loader" id="loader">
         <div class="spinner">
@@ -208,10 +244,10 @@
     <!-- Header End -->
 
     <!-- Main Banner Start -->
-    <section id="main-banner" class="main-banner" style="background-image: url('assets/images/main-banner.jpg');">
+    <section id="main-banner" class="main-banner" style="background-image: url('assets/images/Forteresse_Jadida.jpg');">
         <div class="banner-video">
             <video autoplay="" loop="" muted=""> 
-                <source src="assets/images/banner-video/banner-video.mp4" type="video/mp4">
+                <source src="assets/images/banner-video/cinematic_4k_el_jadida.mp4" type="video/mp4">
             </video>
         </div>
         <div class="sec-wp">
@@ -219,14 +255,13 @@
                 <div class="row">
                     <div class="col-lg-9">
                         <div class="banner-text-wp wow left-animation" data-wow-duration="1s">
-                            <h3 class="h3-title">Conference On</h3>
-                            <h1 class="h1-title">User <mark>Interface</mark></h1>
+                            <h3 class="h3-title">First International Conference on</h3>
+                            <h2 class="h2-t">Research and Advancements in<mark>Electronics</mark>,<mark>Energy</mark> and<mark>Environment</mark></h2>
                             <div class="banner-text">
-                                <p>Every event should be perfact</p>
+                                <p style="font-size: 25px;"><b> ICRA<span style="color: yellow;">E</span><span style="color: red;">E</span><span style="color: green;">E</span>2025</b></p>
                             </div>
                             <div class="banner-btn">
                                 <a href="javascript:void(0)" class="sec-btn" title="Get Tickets">Get Tickets</a>
-                                <a href="javascript:void(0)" class="sec-btn white-btn" title="Watch Video">Watch Video</a>
                             </div>
                         </div>
                     </div>
@@ -457,50 +492,29 @@
                             <div class="col-lg-6">
                                 <div class="schedual-box-wp wow left-animation" data-wow-duration="1s">
                                     <div class="schedual-text-wp">
-                                        <h4 class="h4-title">Your City Music Event</h4>
-                                        <p>By <span>Jhon Smith,</span>Singer</p>
-                                        <div class="event-schedual-wp">
-                                            <div class="event-box">
-                                                <img src="assets/images/svg/clock.svg" alt="clock" width="22" height="22"> 05:00PM to 08:00PM
-                                            </div>
-                                        </div>
-                                        <div class="event-schedual-wp">
-                                            <div class="event-box">
-                                                <img src="assets/images/svg/location.svg" alt="location" width="22" height="25"> 1555 Michael Street Houston, TX 77006
-                                            </div>
-                                        </div>
+                                        <h3 class="h4-title">Prof. Mousa Marzband</h3>
+                                        <p><span>Northumbria University,</span> <br> United Kingdom</p>
                                         <div class="event-btn">
-                                            <a href="javascript:void(0)" class="sec-btn" title="Get Tickets">Get Tickets</a>
+                                            <a href="javascript:void(0)" class="sec-btn" title="Get Tickets">read more</a>
                                         </div>
                                     </div>
-                                    <div class="schedual-img-wp">
-                                        <div class="schedual-img" style="background-image: url('assets/images/event-people-4.jpg');"></div>
-                                        <span>26<br>Aug</span>
+                                    <div class="schedual-img-wp" style="width:fit-content;">
+                                        <div class="schedual-img" style="background-image: url('assets/images/download.png');" ></div>
                                     </div>
                                 </div>
                             </div>
+
                             <div class="col-lg-6">
                                 <div class="schedual-box-wp wow right-animation" data-wow-duration="1s">
                                     <div class="schedual-text-wp">
-                                        <h4 class="h4-title">Your City Music Event</h4>
-                                        <p>By <span>Michael Smith,</span>Singer</p>
-                                        <div class="event-schedual-wp">
-                                            <div class="event-box">
-                                                <img src="assets/images/svg/clock.svg" alt="clock" width="22" height="22"> 05:00PM to 08:00PM
-                                            </div>
-                                        </div>
-                                        <div class="event-schedual-wp">
-                                            <div class="event-box">
-                                                <img src="assets/images/svg/location.svg" alt="location" width="22" height="25"> Horner Strasse 78 4152 RUTZERSDORF
-                                            </div>
-                                        </div>
+                                        <h3 class="h4-title">Dr. Tarik Kamal</h3>
+                                        <p><span>Vaasa University </span> <br> Finland</p>
                                         <div class="event-btn">
-                                            <a href="javascript:void(0)" class="sec-btn" title="Get Tickets">Get Tickets</a>
+                                            <a href="javascript:void(0)" class="sec-btn" title="read more">read more</a>
                                         </div>
                                     </div>
                                     <div class="schedual-img-wp">
-                                        <div class="schedual-img" style="background-image: url('assets/images/event-people-2.jpg');"></div>
-                                        <span>26<br>Aug</span>
+                                        <div class="schedual-img" style="background-image: url('assets/images/download (1).png');"></div>
                                     </div>
                                 </div>
                             </div>
@@ -509,270 +523,76 @@
                             <div class="col-lg-6">
                                 <div class="schedual-box-wp wow left-animation" data-wow-duration="1s">
                                     <div class="schedual-text-wp">
-                                        <h4 class="h4-title">Your City Music Event</h4>
-                                        <p>By <span>ARTHUR PRATT,</span>Singer</p>
-                                        <div class="event-schedual-wp">
-                                            <div class="event-box">
-                                                <img src="assets/images/svg/clock.svg" alt="clock" width="22" height="22"> 05:00PM to 08:00PM
-                                            </div>
-                                        </div>
-                                        <div class="event-schedual-wp">
-                                            <div class="event-box">
-                                                <img src="assets/images/svg/location.svg" alt="location" width="22" height="25"> Rue de Fromelenne 390 4851 Gemmenich
-                                            </div>
-                                        </div>
+                                        <h3 class="h4-title"> Prof. Monica Siroux</h3>
+                                        <p><span>University of Strasbourg</span> <br> France</p>
                                         <div class="event-btn">
-                                            <a href="javascript:void(0)" class="sec-btn" title="Get Tickets">Get Tickets</a>
+                                            <a href="javascript:void(0)" class="sec-btn" title="read more">read more</a>
                                         </div>
                                     </div>
                                     <div class="schedual-img-wp">
-                                        <div class="schedual-img" style="background-image: url('assets/images/event-people-3.jpg');"></div>
-                                        <span>26<br>Aug</span>
+                                        <div class="schedual-img" style="background-image: url('assets/images/download (2).png');"></div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <!-- <div class="col-lg-6">
                                 <div class="schedual-box-wp wow right-animation" data-wow-duration="1s">
                                     <div class="schedual-text-wp">
-                                        <h4 class="h4-title">Your City Music Event</h4>
-                                        <p>By <span>JHON BRIDGES,</span>Singer</p>
-                                        <div class="event-schedual-wp">
-                                            <div class="event-box">
-                                                <img src="assets/images/svg/clock.svg" alt="clock" width="22" height="22"> 05:00PM to 08:00PM
-                                            </div>
-                                        </div>
-                                        <div class="event-schedual-wp">
-                                            <div class="event-box">
-                                                <img src="assets/images/svg/location.svg" alt="location" width="22" height="25"> Rue du Bois Colau 303 5350 Ohey
-                                            </div>
-                                        </div>
+                                        <h2 class="h4-title">Prof. Lahoucine Atourki</h2>
+                                        <p><span>Prof. Lahoucine Atourki</span><br> Morocco</p>
                                         <div class="event-btn">
-                                            <a href="javascript:void(0)" class="sec-btn" title="Get Tickets">Get Tickets</a>
+                                            <a href="javascript:void(0)" class="sec-btn" title="read more">read more</a>
                                         </div>
                                     </div>
                                     <div class="schedual-img-wp">
-                                        <div class="schedual-img" style="background-image: url('assets/images/event-people-1.jpg');"></div>
-                                        <span>26<br>Aug</span>
+                                        <div class="schedual-img" style="background-image: url('assets/images/download (3).png');"></div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
+                            <!-- Professor Section -->
+<!-- Professor Section -->
+<div class="col-lg-6">
+    <div class="schedual-box-wp wow right-animation" data-wow-duration="1s">
+        <div class="schedual-text-wp">
+            <h2 class="h4-title">Prof. Lahoucine Atourki</h2>
+            <p><span>Prof. Lahoucine Atourki</span><br> Morocco</p>
+            <div class="event-btn">
+                <!-- Button trigger modal -->
+                <a href="#" class="sec-btn" title="read more" data-toggle="modal" data-target="#profModal">read more</a>
+            </div>
+        </div>
+        <div class="schedual-img-wp">
+            <div class="schedual-img" style="background-image: url('assets/images/download (3).png');"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="profModal" tabindex="-1" role="dialog" aria-labelledby="profModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="profModalLabel">Prof. Lahoucine Atourki</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Add more information about the professor here -->
+                <p>Prof. Lahoucine Atourki is a renowned professor in the field of [Field of Expertise]. He has published numerous papers and has been awarded several accolades for his contributions to [Field of Expertise].</p>
+                <p>He is currently based in Morocco and is actively involved in [Current Activities].</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="playEvent">
-                        <div class="row event-row">
-                            <div class="col-lg-6">
-                                <div class="schedual-box-wp wow left-animation" data-wow-duration="1s">
-                                    <div class="schedual-text-wp">
-                                        <h4 class="h4-title">Your City Music Event</h4>
-                                        <p>By <span>John Parks,</span>Singer</p>
-                                        <div class="event-schedual-wp">
-                                            <div class="event-box">
-                                                <img src="assets/images/svg/clock.svg" alt="clock" width="22" height="22"> 05:00PM to 08:00PM
-                                            </div>
-                                        </div>
-                                        <div class="event-schedual-wp">
-                                            <div class="event-box">
-                                                <img src="assets/images/svg/location.svg" alt="location" width="22" height="25"> 4680 Cambridge Place Windsor Mill, MD 21244
-                                            </div>
-                                        </div>
-                                        <div class="event-btn">
-                                            <a href="javascript:void(0)" class="sec-btn" title="Get Tickets">Get Tickets</a>
-                                        </div>
-                                    </div>
-                                    <div class="schedual-img-wp">
-                                        <div class="schedual-img" style="background-image: url('assets/images/event-people-5.jpg');"></div>
-                                        <span>26<br>Aug</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="schedual-box-wp wow right-animation" data-wow-duration="1s">
-                                    <div class="schedual-text-wp">
-                                        <h4 class="h4-title">Your City Music Event</h4>
-                                        <p>By <span>Donald Gilford,</span>Singer</p>
-                                        <div class="event-schedual-wp">
-                                            <div class="event-box">
-                                                <img src="assets/images/svg/clock.svg" alt="clock" width="22" height="22"> 05:00PM to 08:00PM
-                                            </div>
-                                        </div>
-                                        <div class="event-schedual-wp">
-                                            <div class="event-box">
-                                                <img src="assets/images/svg/location.svg" alt="location" width="22" height="25"> 2860 Ingram Road Winston Salem, NC 27101
-                                            </div>
-                                        </div>
-                                        <div class="event-btn">
-                                            <a href="javascript:void(0)" class="sec-btn" title="Get Tickets">Get Tickets</a>
-                                        </div>
-                                    </div>
-                                    <div class="schedual-img-wp">
-                                        <div class="schedual-img" style="background-image: url('assets/images/event-people-6.jpg');"></div>
-                                        <span>25<br>Aug</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row event-row">
-                            <div class="col-lg-6">
-                                <div class="schedual-box-wp wow left-animation" data-wow-duration="1s">
-                                    <div class="schedual-text-wp">
-                                        <h4 class="h4-title">Your City Music Event</h4>
-                                        <p>By <span>Bradford Hartsfield,</span>Singer</p>
-                                        <div class="event-schedual-wp">
-                                            <div class="event-box">
-                                                <img src="assets/images/svg/clock.svg" alt="clock" width="22" height="22"> 05:00PM to 08:00PM
-                                            </div>
-                                        </div>
-                                        <div class="event-schedual-wp">
-                                            <div class="event-box">
-                                                <img src="assets/images/svg/location.svg" alt="location" width="22" height="25"> 2114 Heavner Avenue Adairsville, GA 30103
-                                            </div>
-                                        </div>
-                                        <div class="event-btn">
-                                            <a href="javascript:void(0)" class="sec-btn" title="Get Tickets">Get Tickets</a>
-                                        </div>
-                                    </div>
-                                    <div class="schedual-img-wp">
-                                        <div class="schedual-img" style="background-image: url('assets/images/event-people-7.jpg');"></div>
-                                        <span>24<br>Aug</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="schedual-box-wp wow right-animation" data-wow-duration="1s">
-                                    <div class="schedual-text-wp">
-                                        <h4 class="h4-title">Your City Music Event</h4>
-                                        <p>By <span>Nathan Abernathy,</span>Singer</p>
-                                        <div class="event-schedual-wp">
-                                            <div class="event-box">
-                                                <img src="assets/images/svg/clock.svg" alt="clock" width="22" height="22"> 05:00PM to 08:00PM
-                                            </div>
-                                        </div>
-                                        <div class="event-schedual-wp">
-                                            <div class="event-box">
-                                                <img src="assets/images/svg/location.svg" alt="location" width="22" height="25"> 57 Quiet Valley Lane Van Nuys, CA 91405
-                                            </div>
-                                        </div>
-                                        <div class="event-btn">
-                                            <a href="javascript:void(0)" class="sec-btn" title="Get Tickets">Get Tickets</a>
-                                        </div>
-                                    </div>
-                                    <div class="schedual-img-wp">
-                                        <div class="schedual-img" style="background-image: url('assets/images/event-people-8.jpg');"></div>
-                                        <span>23<br>Aug</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="conferenceEvent">
-                        <div class="row event-row">
-                            <div class="col-lg-6">
-                                <div class="schedual-box-wp wow left-animation" data-wow-duration="1s">
-                                    <div class="schedual-text-wp">
-                                        <h4 class="h4-title">Your City Music Event</h4>
-                                        <p>By <span>Nakia Croft,</span>Singer</p>
-                                        <div class="event-schedual-wp">
-                                            <div class="event-box">
-                                                <img src="assets/images/svg/clock.svg" alt="clock" width="22" height="22"> 05:00PM to 08:00PM
-                                            </div>
-                                        </div>
-                                        <div class="event-schedual-wp">
-                                            <div class="event-box">
-                                                <img src="assets/images/svg/location.svg" alt="location" width="22" height="25"> 423 Willis Avenue Daytona Beach, FL 32015
-                                            </div>
-                                        </div>
-                                        <div class="event-btn">
-                                            <a href="javascript:void(0)" class="sec-btn" title="Get Tickets">Get Tickets</a>
-                                        </div>
-                                    </div>
-                                    <div class="schedual-img-wp">
-                                        <div class="schedual-img" style="background-image: url('assets/images/event-people-9.jpg');"></div>
-                                        <span>11<br>Sep</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="schedual-box-wp wow right-animation" data-wow-duration="1s">
-                                    <div class="schedual-text-wp">
-                                        <h4 class="h4-title">Your City Music Event</h4>
-                                        <p>By <span>Andrew Raybon,</span>Singer</p>
-                                        <div class="event-schedual-wp">
-                                            <div class="event-box">
-                                                <img src="assets/images/svg/clock.svg" alt="clock" width="22" height="22"> 05:00PM to 08:00PM
-                                            </div>
-                                        </div>
-                                        <div class="event-schedual-wp">
-                                            <div class="event-box">
-                                                <img src="assets/images/svg/location.svg" alt="location" width="22" height="25"> 2631 Hazelwood Avenue Des Moines, IA 50309
-                                            </div>
-                                        </div>
-                                        <div class="event-btn">
-                                            <a href="javascript:void(0)" class="sec-btn" title="Get Tickets">Get Tickets</a>
-                                        </div>
-                                    </div>
-                                    <div class="schedual-img-wp">
-                                        <div class="schedual-img" style="background-image: url('assets/images/event-people-10.jpg');"></div>
-                                        <span>08<br>Sep</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row event-row">
-                            <div class="col-lg-6">
-                                <div class="schedual-box-wp wow left-animation" data-wow-duration="1s">
-                                    <div class="schedual-text-wp">
-                                        <h4 class="h4-title">Your City Music Event</h4>
-                                        <p>By <span>Michael Nicholson,</span>Singer</p>
-                                        <div class="event-schedual-wp">
-                                            <div class="event-box">
-                                                <img src="assets/images/svg/clock.svg" alt="clock" width="22" height="22"> 05:00PM to 08:00PM
-                                            </div>
-                                        </div>
-                                        <div class="event-schedual-wp">
-                                            <div class="event-box">
-                                                <img src="assets/images/svg/location.svg" alt="location" width="22" height="25"> 1104 Caynor Circle Piscataway, NJ 08854
-                                            </div>
-                                        </div>
-                                        <div class="event-btn">
-                                            <a href="javascript:void(0)" class="sec-btn" title="Get Tickets">Get Tickets</a>
-                                        </div>
-                                    </div>
-                                    <div class="schedual-img-wp">
-                                        <div class="schedual-img" style="background-image: url('assets/images/event-people-11.jpg');"></div>
-                                        <span>05<br>Sep</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="schedual-box-wp wow right-animation" data-wow-duration="1s">
-                                    <div class="schedual-text-wp">
-                                        <h4 class="h4-title">Your City Music Event</h4>
-                                        <p>By <span>Robert Borja,</span>Singer</p>
-                                        <div class="event-schedual-wp">
-                                            <div class="event-box">
-                                                <img src="assets/images/svg/clock.svg" alt="clock" width="22" height="22"> 05:00PM to 08:00PM
-                                            </div>
-                                        </div>
-                                        <div class="event-schedual-wp">
-                                            <div class="event-box">
-                                                <img src="assets/images/svg/location.svg" alt="location" width="22" height="25"> 444 Maloy Court Topeka, KS 66604
-                                            </div>
-                                        </div>
-                                        <div class="event-btn">
-                                            <a href="javascript:void(0)" class="sec-btn" title="Get Tickets">Get Tickets</a>
-                                        </div>
-                                    </div>
-                                    <div class="schedual-img-wp">
-                                        <div class="schedual-img" style="background-image: url('assets/images/event-people-12.jpg');"></div>
-                                        <span>02<br>Sep</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
     <!-- End Event -->
 
@@ -801,189 +621,7 @@
     <!-- End Video -->
 
     <!-- Speakers Start -->
-    <section id="speakers" class="speakers-sec">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="sec-title text-lg-center wow left-animation" data-wow-duration="1s">
-                        <h2 class="h2-title">Our Speakers</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row speakers-slider-wp wow fadeup-animation" data-wow-duration="1s">
-                <div class="col-lg-4">
-                    <div class="speakers-slider-box-wp">
-                        <div class="speakers-img-box" style="background-image: url('assets/images/download.png');">
-                            <div class="speakers-follow-wp">
-                                <ul class="follow-text-wp">
-                                    <li>F</li>
-                                    <li>o</li>
-                                    <li>l</li>
-                                    <li>l</li>
-                                    <li>o</li>
-                                    <li>w</li>
-                                </ul>
-                                <ul class="follow-social-icon-wp">
-                                    <li>
-                                        <a href="javascript:void(0)" title="Facebook">
-                                            <i class="fab fa-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" title="Twitter">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" title="Instagram">
-                                            <i class="fab fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" title="LinkdIn">
-                                            <i class="fab fa-linkedin-in"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="speakers-slider-text-wp">
-                            <h4 class="h4-title">Prof. Mousa Marzband</h4>
-                            <p>Northumbria University United Kingdom
-                                </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="speakers-slider-box-wp">
-                        <div class="speakers-img-box" style="background-image: url('assets/images/download (1).png');">
-                            <div class="speakers-follow-wp">
-                                <ul class="follow-text-wp">
-                                    <li>F</li>
-                                    <li>o</li>
-                                    <li>l</li>
-                                    <li>l</li>
-                                    <li>o</li>
-                                    <li>w</li>
-                                </ul>
-                                <ul class="follow-social-icon-wp">
-                                    <li>
-                                        <a href="javascript:void(0)" title="Facebook">
-                                            <i class="fab fa-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" title="Twitter">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" title="Instagram">
-                                            <i class="fab fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" title="LinkdIn">
-                                            <i class="fab fa-linkedin-in"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="speakers-slider-text-wp">
-                            <h4 class="h4-title"> Dr. Tarik Kamal</h4>
-                            <p>Vaasa University Finland</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="speakers-slider-box-wp">
-                        <div class="speakers-img-box" style="background-image: url('assets/images/download (2).png');">
-                            <div class="speakers-follow-wp">
-                                <ul class="follow-text-wp">
-                                    <li>F</li>
-                                    <li>o</li>
-                                    <li>l</li>
-                                    <li>l</li>
-                                    <li>o</li>
-                                    <li>w</li>
-                                </ul>
-                                <ul class="follow-social-icon-wp">
-                                    <li>
-                                        <a href="javascript:void(0)" title="Facebook">
-                                            <i class="fab fa-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" title="Twitter">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" title="Instagram">
-                                            <i class="fab fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" title="LinkdIn">
-                                            <i class="fab fa-linkedin-in"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="speakers-slider-text-wp">
-                            <h4 class="h4-title"> Prof. Monica Siroux</h4>
-                            <p>University of Strasbourg France</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="speakers-slider-box-wp">
-                        <div class="speakers-img-box" style="background-image: url('assets/images/download (3).png');">
-                            <div class="speakers-follow-wp">
-                                <ul class="follow-text-wp">
-                                    <li>F</li>
-                                    <li>o</li>
-                                    <li>l</li>
-                                    <li>l</li>
-                                    <li>o</li>
-                                    <li>w</li>
-                                </ul>
-                                <ul class="follow-social-icon-wp">
-                                    <li>
-                                        <a href="javascript:void(0)" title="Facebook">
-                                            <i class="fab fa-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" title="Twitter">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" title="Instagram">
-                                            <i class="fab fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)" title="LinkdIn">
-                                            <i class="fab fa-linkedin-in"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="speakers-slider-text-wp">
-                            <h4 class="h4-title">Prof. Lahoucine Atourki</h4>
-                            <p>Mohammed V University Morocco</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Speakera -->
+    
 
     <!-- Sponsors Start -->
     <section id="sponsors" class="sponsors-sec">
@@ -1290,87 +928,19 @@
                                 </form>
                             </div>
                         </div>
-                        <div class="col-xl-5 col-lg-6 offset-xl-2">
-                            <div class="contact-us-info-wp wow right-animation" data-wow-duration="1s">
-                                <div class="contact-talk-us-wp">
-                                    <h2 class="h2-title">Talk with us</h2>
-                                    <ul class="contact-talk-us-link">
-                                        <li>
-                                            <a href="mailto:imevent@gmail.com" title="imevent@gmail.com">
-                                                <span class="info-icon">
-                                                    <i class="far fa-envelope"></i>
-                                                </span>
-                                                <span class="info-text">
-                                                    imevent@gmail.com
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="tel:123456789" title="Call 123 456 789">
-                                                <span class="info-icon">
-                                                    <i class="fas fa-phone-alt"></i>
-                                                </span>
-                                                <span class="info-text">
-                                                    123-456-789
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="javascript:void(0)" title="353, North East NSW 2010, XYZ">
-                                                <span class="info-icon">
-                                                    <i class="fas fa-paper-plane"></i>
-                                                </span>
-                                                <span class="info-text">
-                                                    353, North St East NSW, <span>Walcha NSW, Australia</span>
-                                                </span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <div class="contact-social-media-wp">
-                                        <h2 class="h2-title">Social Media</h2>
-                                        <ul class="social-icon">
-                                            <li>
-                                                <a href="javascript:void(0)" title="Facebook">
-                                                    <i class="fab fa-facebook-f"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)" title="Twitter">
-                                                    <i class="fab fa-twitter"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)" title="Instagram">
-                                                    <i class="fab fa-instagram"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)" title="LinkdIn">
-                                                    <i class="fab fa-linkedin-in"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    
                     </div>
                 </div>
             </div>
             <div class="contact-us-map-wp">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3420.6657152262655!2d151.5961067157418!3d-30.97980958237114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b9fef4f2855de9f%3A0x16200713b4c20fe4!2sNorth%20St%20East%2C%20Walcha%20NSW%202354%2C%20Australia!5e0!3m2!1sen!2sin!4v1624256145028!5m2!1sen!2sin"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3337.5702360051296!2d-8.488757924249446!3d33.22536137347953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda91e1d173ae243%3A0x4fa699b9874f3eab!2sFacult%C3%A9%20des%20Sciences%20d&#39;el%20Jadida%20-%20UCD!5e0!3m2!1sfr!2sma!4v1740264443754!5m2!1sfr!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
         <div class="bottom-footer">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <div class="footer-logo">
-                            <a href="index.html" title="imEvent">
-                                <img src="assets/images/logo.png" alt="Footer Logo" width="138" height="51">
-                            </a>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="row">
@@ -1399,6 +969,10 @@
         </div>
     </footer>
     <!-- Footer End -->
+
+<!-- Bootstrap CSS -->
+
+
 
     <script>
         function toggleAccordion(element) {
@@ -1457,6 +1031,7 @@
 
     <!-- Jquery JS Link -->
     <script src="assets/js/jquery-3.5.1.min.js "></script>
+
 
     <!-- Bootstrap JS Link -->
     <script src="assets/js/bootstrap-4.5.2.min.js "></script>
