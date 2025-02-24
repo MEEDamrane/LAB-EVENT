@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>imEvent</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="imEvent - Responsive HTML5 Template">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Favicon Link -->
+    <link rel="icon" href="assets/images/favicon.png" type="image/gif" sizes="16x16">
+
+    <!-- Bootstrap CSS Link -->
+    <link rel="stylesheet" href="assets/css/bootstrap-4.5.2.min.css">
+
+    <!-- Google Font Link -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Saira:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Wow Animation CSS Link -->
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+
+    <!-- Slick Slider CSS Link -->
+    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css" />
+
+    <!-- Main Style CSS Link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .accordion {
+            max-width: 100%;
+            margin: 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 100px;
+        }
+
+        .accordion-title {
+            background-color: #f8f8f8;
+            padding: 15px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .accordion-title:hover {
+            background-color: #eaeaea;
+        }
+
+        .accordion-content {
+            display: none;
+            padding: 15px;
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+        }
+
+        .accordion-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .accordion-content li {
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .accordion-content li:last-child {
+            border-bottom: none;
+        }
+
+        .plus-sign {
+            font-size: 22px;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .rotated {
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+     <!-- Header -->
+     <header class="site-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="site-branding">
+                        <a href="index.html" class="custom-logo-link" title="imEvent">
+                            <img src="assets/images/logo.png" alt="header-logo" width="138" height="51">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="header-main">
+                        <nav class="main-navigation">
+                            <div class="for-mob">
+                                <button class="menu-toggle">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                            <div class="for-mob">
+                                <a href="tel:123456789" title="Call 123-456-789" class="mob-phone">
+                                    <i class="fas fa-phone"></i>
+                                </a>
+                            </div>
+                            
+                            <div class="header-menu">
+                                <div class="menu-menu-1-container" >
+                                    <ul class="menu nav-menu" >
+                                        <li ><a style="color: #33aceb;" href="index.html" title="Home">Home</a></li>
+                                        <li><a  style="color: #33aceb;"href="#about" title="About Us">About Us</a></li>
+                                        <li class="active"><a style="color: #33aceb;" href="committer.html" title="Committer">Committer</a></li>
+                                        <li><a style="color: #33aceb;" href="#speakers" title="Speakers">Speakers</a></li>
+                                        <li><a style="color: #33aceb;" href="#sponsors" title="Sponsors">Sponsors</a></li>
+                                        <li><a style="color: #33aceb;" href="#blog" title="Blog">Blog</a></li>
+                                        <li><a style="color: #33aceb;" href="#contact-us" title="Contact Us">Contact Us</a></li>
+                                        <li><a  style="color: #33aceb;"href="#Registration-fees" title="Registration fees"> fees</a></li>
+
+                                    </ul>
+                                </div>
+                                <div class="for-mob">
+                                    <div class="social-wp">
+                                        <div class="social-icon">
+                                            <ul>
+                                                <li>
+                                                    <a href="javascript:void(0)" title="Twitter">
+                                                        <i class="fab fa-twitter"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)" title="Facebook">
+                                                        <i class="fab fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)" title="Instagram">
+                                                        <i class="fab fa-instagram"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)" title="LinkdIn">
+                                                        <i class="fab fa-linkedin-in"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="info-wp">
+                                            <ul>
+                                                <li>
+                                                    <a href="tel:180045678923" title="Call 1-800-456-478-23">
+                                                        <span><i class="fas fa-phone"></i></span> 1-800-456-478-23
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="mailto:imevent@gmail.com" title="imevent@gmail.com">
+                                                        <span><i class="far fa-envelope"></i></span> imevent@gmail.com
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+
+    <div class="accordion">
+        <div class="accordion-title" onclick="toggleAccordion(this)">
+            Organizing committee
+            <span class="plus-sign">+</span>
+        </div>
+        <div class="accordion-content">
+            <ul>
+                <li><a href="#">Pr. Said Dlimi - Faculty of Sciences, Chouaib Doukkali University</a></li>
+                <li><a href="#">Pr. Abdelaziz Khoukh - Faculty of Sciences, Chouaib Doukkali University</a></li>
+                <li><a href="#">Pr. Najib El Kamoune - Faculty of Sciences, Chouaib Doukkali University</a></li>
+                <li><a href="#">Pr. Mohamed Louzazni - National School of Applied Sciences, Chouaib Doukkali University</a></li>
+                <li><a href="#">Pr. Khalid El Khadiri - Faculty of Sciences, Chouaib Doukkali University</a></li>
+                <li><a href="#">Pr. Elhadi Baghaz - Faculty of Sciences, Chouaib Doukkali University</a></li>
+                <li><a href="#">Pr. Said Amrane - Faculty of Sciences, Chouaib Doukkali University</a></li>
+                <li><a href="#">Pr. Mohssine Aoutoul - Faculty of Sciences, Chouaib Doukkali University</a></li>
+                <li><a href="#">Pr. Ouidade Labouidiya - Faculty of Sciences, Chouaib Doukkali University</a></li>
+                <li><a href="#">Pr. Hamid Nebdi - Faculty of Sciences, Chouaib Doukkali University</a></li>
+                <li><a href="#">Pr. Yassine Tounsi - Faculty of Sciences, Chouaib Doukkali University</a></li>
+                <li><a href="#">Pr. Abdelaziz Amine - Faculty of Sciences, Chouaib Doukkali University</a></li>
+                <li><a href="#">Pr. Lhoussine Limouny - Faculty of Sciences and Technics, Moulay Ismail University</a></li>
+                <li><a href="#">Pr. Samir Elouaham - Polydisciplinary Faculty, Ibn Zohr University</a></li>
+                <li><a href="#">Pr. Abdelfattah Narjis - National School of Applied Sciences, Ibn Zohr University</a></li>
+                <li><a href="#">Pr. Mohamed Salah - Faculty of Sciences, Chouaib Doukkali University</a></li>
+                <li><a href="#">Pr. Redouane Mghaiouini - National School of Applied Sciences, Ibn Toufail University</a></li>
+                <li><a href="#">Pr. Jamila Hassoune - Higher Institutes of Nursing and Health Technology Professions</a></li>
+                <li><a href="#">Pr. Siham Esserti - Faculty of Sciences, Chouaib Doukkali University</a></li>
+                <li><a href="#">Pr. Khadija Sahel - Higher Institutes of Nursing and Health Technology Professions</a></li>
+                <li><a href="#">Pr. Hicham Doghmi - Faculty of Sciences, Chouaib Doukkali University</a></li>
+                <li><a href="#">Pr. Fatima Majid - Faculty of Sciences, Chouaib Doukkali University</a></li>
+                <li><a href="#">Pr. Charaf Hajjaj - Faculty of Sciences, Chouaib Doukkali University</a></li>
+                <li><a href="#">Pr. Najib Elouanjli - Higher School of Technology, Moulay Ismail University</a></li>
+                <li><a href="#">Pr. Mohamed Mansouri - National School of Applied Sciences, Hassan First University</a></li>
+                <li><a href="#">Pr. Mahmoud Elmouden - National School of Applied Sciences, Chouaib Doukkali University</a></li>
+                <li><a href="#">Pr. Hamid Nasrellah - Higher School of Education and Training, Chouaib Doukkali University</a></li>
+                <li><a href="#">Pr. Mohamed Lahlou - National School of Applied Sciences, Chouaib Doukkali University</a></li>
+                <li><a href="#">Pr. Mehdi Laadissi - National School of Applied Sciences, Chouaib Doukkali University</a></li>
+                <li><a href="#">Pr. Aziz Dkiouak - Faculty of Sciences, Chouaib Doukkali University</a></li>
+                <li><a href="#">Pr. Zineb Moussafir - Faculty of Sciences and Technology, Moulay Smail University</a></li>
+                <li><a href="#">Pr. Mohamed Khouilid - Faculty of Sciences, Chouaib Doukkali University</a></li>
+                <li><a href="#">Pr. Hicham Labrim - National School of Applied Sciences, Ibn Toufail University</a></li>
+                <li><a href="#">Pr. Abderrahmane Nait Alla - Faculty of Applied Sciences, Ibn Zohr University</a></li>
+            </ul>
+            
+        </div>
+    </div>
+    <div class="accordion1">
+        <div class="accordion-title" onclick="toggleAccordion(this)">
+            Scientific committee            <span class="plus-sign">+</span>
+        </div>
+        <div class="accordion-content">
+            <ul>
+                <li>Pr. Said Dlimi - Faculty of Sciences, Chouaib Doukkali University, Morocco</li>
+                <li>Pr. Abdelaziz Khoukh - Faculty of Sciences, Chouaib Doukkali University, Morocco</li>
+                <li>Pr. Najib El Kamoune - Faculty of Sciences, Chouaib Doukkali University, Morocco</li>
+                <li>Pr. Mohamed Louzazni - National School of Applied Sciences, Chouaib Doukkali University, Morocco</li>
+                <li>Pr. Khalid El Khadiri - Faculty of Sciences, Chouaib Doukkali University, Morocco</li>
+                <li>Pr. Elhadi Baghaz - Faculty of Sciences, Chouaib Doukkali University, Morocco</li>
+                <li>Pr. Said Amrane - Faculty of Sciences, Chouaib Doukkali University, Morocco</li>
+                <li>Pr. Mohssine Aoutoul - Faculty of Sciences, Chouaib Doukkali University, Morocco</li>
+                <li>Pr. Hamid Nebdi - Faculty of Sciences, Chouaib Doukkali University, Morocco</li>
+                <li>Pr. Yassine Tounsi - Faculty of Sciences, Chouaib Doukkali University, Morocco</li>
+                <li>Pr. Abdelaziz Amine - Faculty of Sciences, Chouaib Doukkali University, Morocco</li>
+                <li>Pr. Lhoussine Limouny - Faculty of Sciences and Technics, Moulay Ismail University, Morocco</li>
+                <li>Pr. Samir Elouaham - Polydisciplinary Faculty, Ibn Zohr University, Morocco</li>
+                <li>Pr. Abdelfattah Narjis - National School of Applied Sciences, Ibn Zohr University, Morocco</li>
+                <li>Pr. Mohamed Salah - Faculty of Sciences, Chouaib Doukkali University, Morocco</li>
+                <li>Pr. Redouane Mghaiouini - National School of Applied Sciences, Ibn Toufail University, Morocco</li>
+                <li>Pr. Abdelhamid El Kaaouachi - Faculty of Sciences, Ibn Zohr University, Morocco</li>
+                <li>Pr. Abderahmane Elmellouky - Faculty of Sciences, Chouaib Doukkali University, Morocco</li>
+                <li>Pr. Redouane Lahkale - Faculty of Sciences, Chouaib Doukkali University, Morocco</li>
+                <li>Pr. Hicham Doghmi - Faculty of Sciences, Chouaib Doukkali University, Morocco</li>
+                <li>Pr. Fatima Majid - Faculty of Sciences, Chouaib Doukkali University, Morocco</li>
+                <li>Pr. Ibrahim Amghar - Faculty of Sciences, Chouaib Doukkali University, Morocco</li>
+                <li>Pr. Abdelouahab EL Hadrami - Faculty of Sciences, Chouaib Doukkali University, Morocco</li>
+                <li>Pr. Nait Alla Abderrahmane - Faculty of Applied Sciences, Ibn Zohr University, Morocco</li>
+                <li>Pr. Mahmoud Elmouden - National School of Applied Sciences, Chouaib Doukkali University, Morocco</li>
+                <li>Pr. Najib Elouanjli - Higher School of Technology, Moulay Ismail University, Morocco</li>
+                <li>Pr. Abdelouahab Elharami - Faculty of Sciences, Chouaib Doukkali University, Morocco</li>
+                <li>Pr. Anas Had - Jean Monnet University Saint-Etienne, France</li>
+                <li>Pr. Mohamed Lahlou - National School of Applied Sciences, Chouaib Doukkali University, Morocco</li>
+                <li>Pr. Mehdi Laadissi - National School of Applied Sciences, Chouaib Doukkali University, Morocco</li>
+                <li>Pr. Mohamed Mansouri - National School of Applied Sciences, Hassan First University, Morocco</li>
+                <li>Pr. Hamid Nasrellah - Higher School of Education and Training, Chouaib Doukkali University, Morocco</li>
+                <li>Pr. Meryem Bensemlali - Higher School of Education and Training, Mohammed First University, Morocco</li>
+                <li>Pr. Sameer Al-Dahidi - Mechanical & Maintenance Engineering Depart., German Jordanian University, Jordan</li>
+                <li>Pr. Amine El Moutaouakil - Depart of Electrical and Communication Engineering, UAE University, United Arab Emirates</li>
+                <li>Pr. Aziz Dkiouak - Faculty of Sciences, Chouaib Doukkali University, Morocco</li>
+                <li>Pr. Hanan El Alaoui-Belghiti - Faculty of Sciences, Chouaib Doukkali University. Morocco</li>
+                <li>Pr. Ouidade Labouidiya - Faculty of Sciences, Chouaib Doukkali University. Morocco</li>
+                <li>Pr. Fatima Lakrami - Faculty of Sciences, Chouaib Doukkali University. Morocco</li>
+                <li>Pr. Monica Siroux - National Institute of Applied Sciences, Strasboug University, France</li>
+                <li>Pr. Mohamed Khalis - Regional Center for Education and Training Professions in the Casablanca-Settat region, Morocco</li>
+                <li>Pr. Chi-Te Liang - Department of Physics, National Taiwan University, Taiwan</li>
+                <li>Pr. Rachid Amrousse - Faculty of Sciences, Chouaib Doukkali University, Morocco</li>
+            </ul>
+        </div>
+    </div>
+    <div class="accordion1">
+        <div class="accordion-title" onclick="toggleAccordion(this)">
+            Publication comittee           <span class="plus-sign">+</span>
+        </div>
+        <div class="accordion-content">
+            <ul>
+                <li>Pr. Said Dlimi: Faculty of Sciences, Chouaib Doukkali University, Morocco.</li>
+                <li>Pr. Mohamed Louzazni: National School of Applied Sciences, Chouaib Doukkali University, Morocco.</li>
+                <li>Pr. Redouane Mghaiouini: National School of Applied Sciences, Ibn Toufail University, Morocco.</li>
+                <li>Pr. Tariq Kamal: School of Technology and Innovations, Electrical Engineering, University of Vaasa, Finland.</li>
+                <li>Pr. Amine El Moutaouakil: Department of Electrical Engineering, UAE University, United Arab Emirates.</li>
+                <li>Pr. Najib Elouanjli: Higher School of Technology, Moulay Ismail University, Morocco.</li>
+                <li>Pr. Mohamed Salah: Faculty of Sciences, Chouaib Doukkali University, Morocco.</li>
+                <li>Pr. Hamid Nasrellah: Higher School of Education and Training, Chouaib Doukkali University, Morocco.</li>
+                <li>Pr. Mohamed Tahiri: Higher School of Technology, Hassan II University, Morocco.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="accordion1">
+        <div class="accordion-title" onclick="toggleAccordion(this)">
+            Technical program comittee          <span class="plus-sign">+</span>
+        </div>
+        <div class="accordion-content">
+            <ul></ul>
+        </div>
+    </div>
+    <div class="accordion1">
+        <div class="accordion-title" onclick="toggleAccordion(this)">
+            Apprenticeship committee          <span class="plus-sign">+</span>
+        </div>
+        <div class="accordion-content">
+            <h2>Phd Students</h2>
+            <ul>
+                <li>Mr. Fahd Elmourabit: Faculty of Sciences, Chouaib Doukkali University, Morocco.</li>
+                <li>Miss Fatima Id Ouissaaden: Faculty of Sciences, Chouaib Doukkali University, Morocco.</li>
+                <li>Mr. Hamza Kamel: Faculty of Sciences, Chouaib Doukkali University, Morocco.</li>
+                <li>Mr. Yassine Essakali: Faculty of Sciences, Chouaib Doukkali University, Morocco.</li>
+                <li>Miss Jihad El Mekaoui: Faculty of Sciences, Chouaib Doukkali University, Morocco.</li>
+                <li>Dr. Hanane Saadi: Faculty of Sciences, Chouaib Doukkali University, Morocco.</li>
+                <li>Dr. El Mehdi Irzan: Faculty of Sciences, Chouaib Doukkali University, Morocco.</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        function toggleAccordion(element) {
+            let content = element.nextElementSibling;
+            let plusSign = element.querySelector('.plus-sign');
+
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                plusSign.classList.remove("rotated");
+            } else {
+                content.style.display = "block";
+                plusSign.classList.add("rotated");
+            }
+        }
+    </script>
+
+    <!-- Scroll To Top -->
+    <a href="#main-banner" id="scrollToTop" class="scrolltop" title="Back To Top" style="display: none;"><i class="fas fa-angle-double-up"></i></a>
+    <!-- Scroll To Top End -->
+
+    <!-- Jquery JS Link -->
+    <script src="assets/js/jquery-3.5.1.min.js "></script>
+
+    <!-- Bootstrap JS Link -->
+    <script src="assets/js/bootstrap-4.5.2.min.js "></script>
+
+    <!-- Popper JS Link -->
+    <script src="assets/js/popper-1.16.0.min.js"></script>
+
+    <!-- Font Awsome JS Link -->
+    <script src="assets/js/font-awesome.min.js"></script>
+
+    <!-- Wow Animation JS Link -->
+    <script src="assets/js/wow.js "></script>
+
+    <!-- Slick Slider JS Link -->
+    <script src="assets/js/slick.min.js "></script>
+
+    <!-- Custom JS Link -->
+    <script src="assets/js/custom.js "></script>
+
+</body>
+</html>
