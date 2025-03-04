@@ -128,6 +128,61 @@
           .h2-t mark:nth-of-type(3) {
             text-decoration-color: green;
           }
+
+          .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80%;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .popup-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .popup-image {
+            width: 120px;
+            height: 120px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .popup-title {
+            margin: 0;
+        }
+
+        .popup-bio {
+            margin-top: 20px;
+        }
     </style>
 </head>
 
@@ -495,7 +550,7 @@
                                         <h3 class="h4-title">Prof. Mousa Marzband</h3>
                                         <p><span>Northumbria University,</span> <br> United Kingdom</p>
                                         <div class="event-btn">
-                                            <a href="javascript:void(0)" class="sec-btn" title="Get Tickets">read more</a>
+                                            <a href="#" class="sec-btn read-more-btn" data-name="Mousa Marzband" data-university="Northumbria University" data-country="United Kingdom" data-image="assets/images/download.png">read more</a>
                                         </div>
                                     </div>
                                     <div class="schedual-img-wp" style="width:fit-content;">
@@ -510,7 +565,7 @@
                                         <h3 class="h4-title">Dr. Tarik Kamal</h3>
                                         <p><span>Vaasa University </span> <br> Finland</p>
                                         <div class="event-btn">
-                                            <a href="javascript:void(0)" class="sec-btn" title="read more">read more</a>
+                                            <a href="#" class="sec-btn read-more-btn" data-name="Tarik Kamal" data-university="Vaasa University" data-country="Finland" data-image="assets/images/download (1).png">read more</a>
                                         </div>
                                     </div>
                                     <div class="schedual-img-wp">
@@ -526,7 +581,7 @@
                                         <h3 class="h4-title"> Prof. Monica Siroux</h3>
                                         <p><span>University of Strasbourg</span> <br> France</p>
                                         <div class="event-btn">
-                                            <a href="javascript:void(0)" class="sec-btn" title="read more">read more</a>
+                                            <a href="#" class="sec-btn read-more-btn" data-name="Monica Siroux" data-university="University of Strasbourg" data-country="France" data-image="assets/images/download (2).png">read more</a>
                                         </div>
                                     </div>
                                     <div class="schedual-img-wp">
@@ -534,66 +589,48 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="col-lg-6">
+                           
+                            <div class="col-lg-6">
                                 <div class="schedual-box-wp wow right-animation" data-wow-duration="1s">
                                     <div class="schedual-text-wp">
                                         <h2 class="h4-title">Prof. Lahoucine Atourki</h2>
                                         <p><span>Prof. Lahoucine Atourki</span><br> Morocco</p>
                                         <div class="event-btn">
-                                            <a href="javascript:void(0)" class="sec-btn" title="read more">read more</a>
+                                            <a href="#" class="sec-btn read-more-btn" data-name="Lahoucine Atourki" data-university="University" data-country="Morocco" data-image="assets/images/download (3).png">read more</a>
                                         </div>
                                     </div>
                                     <div class="schedual-img-wp">
                                         <div class="schedual-img" style="background-image: url('assets/images/download (3).png');"></div>
                                     </div>
                                 </div>
-                            </div> -->
-                            <!-- Professor Section -->
-<!-- Professor Section -->
-<div class="col-lg-6">
-    <div class="schedual-box-wp wow right-animation" data-wow-duration="1s">
-        <div class="schedual-text-wp">
-            <h2 class="h4-title">Prof. Lahoucine Atourki</h2>
-            <p><span>Prof. Lahoucine Atourki</span><br> Morocco</p>
-            <div class="event-btn">
-                <!-- Button trigger modal -->
-                <a href="#" class="sec-btn" title="read more" data-toggle="modal" data-target="#profModal">read more</a>
-            </div>
-        </div>
-        <div class="schedual-img-wp">
-            <div class="schedual-img" style="background-image: url('assets/images/download (3).png');"></div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal -->
-<div class="modal fade" id="profModal" tabindex="-1" role="dialog" aria-labelledby="profModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="profModalLabel">Prof. Lahoucine Atourki</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <!-- Add more information about the professor here -->
-                <p>Prof. Lahoucine Atourki is a renowned professor in the field of [Field of Expertise]. He has published numerous papers and has been awarded several accolades for his contributions to [Field of Expertise].</p>
-                <p>He is currently based in Morocco and is actively involved in [Current Activities].</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-
+                            </div>
                         </div>
-                    </div>
                     </div>
                 </div>
             </div>
+        </div>
     </section>
+
+     <!-- Popup Container -->
+     <div class="popup-overlay">
+        <div class="popup-content">
+            <span class="popup-close">&times;</span>
+            <div class="popup-header">
+                <div class="popup-image"></div>
+                <div>
+                    <h2 class="popup-title"></h2>
+                    <p class="popup-subtitle"></p>
+                </div>
+            </div>
+            <div class="popup-bio">
+                <h3>Biography</h3>
+                <p class="biography-text">
+                    <!-- Dynamically populated biography text -->
+                </p>
+            </div>
+        </div>
+    </div>
+
     <!-- End Event -->
 
     <!-- Video Start -->
@@ -664,68 +701,7 @@
     </section>
     <!-- End Sponsors -->
 
-    <!-- Gallery Start -->
-    <section class="gallery-sec">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12 text-lg-center">
-                    <div class="sec-title">
-                        <h2 class="h2-title wow left-animation" data-wow-duration="1s">Gallery</h2>
-                        <h3 class="h3-title wow left-animation" data-wow-duration="1.2s">Beautiful Times</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row gallery-row wow fadeup-animation" data-wow-duration="1s">
-                <div class="col-lg-8">
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="gallery-img-box-wp">
-                                <a href="javascript:void(0)" title="Gallery Image">
-                                    <div class="gallery-img-wp" style="background-image: url('assets/images/gallery-images/gallery-img-3.jpg');"></div>
-                                </a>
-                                <h3 class="h4-title">Business Conference</h3>
-                            </div>
-                        </div>
-                        <div class="col-lg-8">
-                            <div class="gallery-img-box-wp">
-                                <a href="javascript:void(0)" title="Gallery Image">
-                                    <div class="gallery-img-wp" style="background-image: url('assets/images/gallery-images/gallery-img-2.jpg');"></div>
-                                </a>
-                                <h3 class="h4-title">Business Conference</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <div class="gallery-img-box-wp">
-                                <a href="javascript:void(0)" title="Gallery Image">
-                                    <div class="gallery-img-wp" style="background-image: url('assets/images/gallery-images/gallery-img-6.jpg');"></div>
-                                </a>
-                                <h3 class="h4-title">Business Conference</h3>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="gallery-img-box-wp">
-                                <a href="javascript:void(0)" title="Gallery Image">
-                                    <div class="gallery-img-wp" style="background-image: url('assets/images/gallery-images/gallery-img-4.jpg');"></div>
-                                </a>
-                                <h3 class="h4-title">Business Conference</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="gallery-big-img-box-wp">
-                        <a href="javascript:void(0)" title="Gallery Image">
-                            <div class="gallery-big-img-wp" style="background-image: url('assets/images/gallery-images/gallery-img-1.jpg');"></div>
-                        </a>
-                        <h3 class="h4-title">Business Conference</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Gallery -->
+   
 
  
   <!-- Registration fees Start -->
@@ -952,6 +928,68 @@
                 document.getElementById("seconds").innerHTML = "0";
             }
         }, 1000);
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const readMoreBtns = document.querySelectorAll('.read-more-btn');
+            const popupOverlay = document.querySelector('.popup-overlay');
+            const popupClose = document.querySelector('.popup-close');
+            const popupImage = document.querySelector('.popup-image');
+            const popupTitle = document.querySelector('.popup-title');
+            const popupSubtitle = document.querySelector('.popup-subtitle');
+            const biographyText = document.querySelector('.biography-text');
+            
+
+            // Speaker details (you can expand these)
+            const speakerBios = {
+                'Mousa Marzband': {
+                    biography: 'Prof. Mousa Marzband is an esteemed academic and researcher with joint affiliations at Northumbria University, UK, and King Abdulaziz University, Saudi Arabia. With a distinguished career spanning several years, Prof. Marzband has established himself as a leading authority in the fields of smart grids, renewable energy systems, and energy storage technologies. His research focuses on the integration of distributed energy resources (DERs), photovoltaic (PV) systems, and electric vehicles (EVs) into modern energy networks, with an emphasis on sustainability, efficiency, and economic viability. Prof. Marzband has authored numerous high-impact publications in leading journals and conferences, addressing critical challenges in energy management, demand response, and grid stability. His work bridges the gap between theoretical advancements and practical applications, making significant contributions to the development of intelligent, adaptive systems for future energy networks.'
+                },
+                'Tarik Kamal': {
+                    biography: "Dr. Tariq Kamal is a leading expert in energy and sustainable engineering, holding doctorates from the University of Cadiz, Technical University of Munich, Germany, and Sakarya University. As Assistant Professor and head of the Power Electronics and Control Group at the University of Vaasa, Finland, he conducts pioneering research in intelligent control, renewable energy systems, electric vehicles, and smart grid integration.  Dr. Kamal's work focuses on advanced energy storage solutions, including solid-state batteries and supercapacitors, through Horizon Europe projects. Previously, he was a research fellow at the Technical University of Munich, applying AI to optimize power systems. With over 100 peer-reviewed publications and approximately $20 million in research funding, Dr. Kamal collaborates globally on transformative projects. His contributions drive innovation in sustainable energy, positioning him as a leader in the field. Dr. Kamal's exceptional contributions to the field have positioned him as a global leader in sustainable energy innovation, inspiring both the academic and industrial communities in their pursuit of a cleaner, smarter energy future."
+                },
+                'Monica Siroux': {
+                    biography: 'Prof. Monica Siroux is Full Professor at INSA Strasbourg (National Institute of Applied Sciences) and ICube Laboratory of University of Strasbourg France. She received her PhD in 1996 from the University Paris XII and the Accreditation to supervise research in 2008 from University of Valenciennes. Between 2013-2019 Professor Siroux was Director of the Energy Department at INSA Strasbourg and Director of a Research Chair "Innovative Walls”. She leads a group of researchers and PhD students. Her main areas of research are Energy efficiency and Renewable energy. Professor Siroux published over 100 research papers in refereed international journals and international conferences and supervised over 15 PhD students. She chaired numerous international and national conferences and technical meetings.'
+                },
+                'Lahoucine Atourki': {
+                    biography: 'Dr. Lahoucine Atourki is an Associate Professor and the head of the MANAPSE Lab at Mohammed V University in Rabat, Morocco, specializing in materials for energy and water systems. He earned his PhD from Ibn Zohr University in Morocco in collaboration with the Polytechnic University of Valencia, focusing on nanostructured oxides and perovskite thin films for emerging solar cells. He completed a postdoctoral fellowship at the Georgia Institute of Technology, where he worked on 2D materials to enhance the stability of perovskite-based solar cells. Prof. Atourki and his team focus on the synthesis of earth-abundant materials for various applications, including solar cells, photoelectrochemical cells, and atmospheric water harvesting. He serves as the president of the Scientific Morocco Association, dedicated to science education and climate change adaptation. He is also a member of the African Materials Research Society (A-MRS) and the Moroccan Association of Crystallography (AMC).'
+                }
+            };
+
+            readMoreBtns.forEach(btn => {
+                btn.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const name = this.getAttribute('data-name');
+                    const university = this.getAttribute('data-university');
+                    const country = this.getAttribute('data-country');
+                    const image = this.getAttribute('data-image');
+
+                    // Set popup content
+                    popupImage.style.backgroundImage = `url('${image}')`;
+                    popupTitle.textContent = name;
+                    popupSubtitle.textContent = `${university}, ${country}`;
+                    
+                    // Set biography from predefined object
+                    const speakerInfo = speakerBios[name];
+                    biographyText.textContent = speakerInfo.biography;
+                    
+
+                    // Show popup
+                    popupOverlay.style.display = 'flex';
+                });
+            });
+
+            popupClose.addEventListener('click', function() {
+                popupOverlay.style.display = 'none';
+            });
+
+            popupOverlay.addEventListener('click', function(event) {
+                if (event.target === popupOverlay) {
+                    popupOverlay.style.display = 'none';
+                }
+            });
+        });
     </script>
     
 
