@@ -29,6 +29,236 @@
             font-family: Arial, sans-serif;
             padding: 20px;
         }
+        #Registration-fees {
+            background-color: #f8f9fa;
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+    
+        .registration-container {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 40px;
+            position: relative;
+            z-index: 2;
+        }
+    
+        .section-title h2 {
+            color: #007bff;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+    
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, #007bff, #00d4ff);
+        }
+    
+        .fees-table {
+            margin-bottom: 30px;
+        }
+    
+        .fees-table thead {
+            background: linear-gradient(to right, #007bff, #00d4ff);
+            color: white;
+        }
+    
+        .fees-table th, .fees-table td {
+            vertical-align: middle;
+            padding: 15px;
+        }
+    
+        .fees-table tbody tr:nth-child(even) {
+            background-color: #f1f6ff;
+        }
+    
+        .fees-table tbody tr:hover {
+            background-color: #e6f2ff;
+            transition: background-color 0.3s ease;
+        }
+    
+        .registration-content {
+            background-color: #f0f8ff;
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 30px;
+        }
+    
+        .registration-content h4 {
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+    
+        .registration-content ul.list-group {
+            margin-top: 20px;
+        }
+    
+        .registration-content .list-group-item {
+            background-color: white;
+            border: 1px solid #dee2e6;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            padding: 15px;
+        }
+    
+        .registration-content .list-group-item strong {
+            color: #007bff;
+            margin-right: 10px;
+        }
+    
+        .bank-payment {
+            background-color: #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    
+        @media (max-width: 768px) {
+            .registration-container {
+                padding: 20px;
+            }
+    
+            .fees-table {
+                font-size: 14px;
+            }
+        }
+
+        #submission-guidelines {
+            background-color: #f8f9fa;
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+    
+        #submission-guidelines::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, #007bff 0%, #00d4ff 100%);
+            opacity: 0.1;
+            transform: rotate(45deg);
+            z-index: 1;
+        }
+    
+        .submission-container {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+            padding: 40px;
+            position: relative;
+            z-index: 2;
+        }
+    
+        .submission-header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+    
+        .submission-header h2 {
+            color: #007bff;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+    
+        .submission-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, #007bff, #00d4ff);
+        }
+    
+        .guidelines-section {
+            margin-bottom: 30px;
+        }
+    
+        .guidelines-section h3 {
+            color: #007bff;
+            border-left: 4px solid #007bff;
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+    
+        .guidelines-section ul {
+            padding-left: 30px;
+        }
+    
+        .guidelines-section li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 25px;
+        }
+    
+        .guidelines-section li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #007bff;
+            font-weight: bold;
+            font-size: 1.5em;
+            line-height: 1;
+        }
+    
+        .important-dates {
+            background-color: #f0f8ff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+    
+        .important-dates li {
+            margin-bottom: 10px;
+            color: #0056b3;
+        }
+    
+        .contact-section {
+            background-color: #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+    
+        .download-links a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+    
+        .download-links a:hover {
+            background-color: #0056b3;
+        }
+    
+        @media (max-width: 768px) {
+            #submission-guidelines::before {
+                display: none;
+            }
+    
+            .submission-container {
+                padding: 20px;
+            }
+        }
         
     </style>
 </head>
@@ -39,7 +269,7 @@
                 <div class="col-lg-2">
                     <div class="site-branding">
                         <a href="index.html" class="custom-logo-link" title="imEvent">
-                            <img src="assets/images/logo.png" alt="header-logo" width="138" height="51">
+                            <img src="assets/images/logo1R.png" alt="header-logo" width="138" height="51">
                         </a>
                     </div>
                 </div>
@@ -124,145 +354,170 @@
     </header>
     <!--header -->
       <!-- Registration fees Start -->
-<section id="Registration-fees" class="registration-fees py-5 ">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title text-center">
-                    <h2 class="h2-title text-primary">Registration Fees</h2>
-                </div>
-                <div class="table-responsive mt-4">
-                    <table class="tabGITle table-bordered text-center">
-                        <thead class="bg-primary text-white">
-                            <tr>
-                                <th>Category</th>
-                                <th>Fees (€)</th>
-                                <th>Fees (DH)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>PhD Students</strong></td>
-                                <td>100 €</td>
-                                <td>1000 DH</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Postdoc fellows and PhD’s</strong></td>
-                                <td>125 €</td>
-                                <td>1250 DH</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Academics</strong></td>
-                                <td>150 €</td>
-                                <td>1500 DH</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Industrials</strong></td>
-                                <td>300 €</td>
-                                <td>3000 DH</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="registration-content mt-5">
-                    <h4 class="text-primary">Registration fees include the following:</h4>
-                    
-                        Conference Welcome Packet <br>
-                        Attendance at all Technical Sessions (Keynote Speeches, Oral Sessions, Poster Sessions, Breakouts, etc.) <br>
-                        Coffee breaks and Lunches (all days of the conference) <br>
-                        Conference Proceedings (USB) <br>
-                        Hard Copy of the Conference Program Guide <br>
-                        Certificate of Presentation/Participation <br>
-                   
-
-                    <h4 class="mt-5 text-primary">Publication Fees:</h4>
-                    <p>For publication in E3S WOC, a fee of <strong>100 € (1000 DH)</strong> per accepted article applies. Participants wishing to publish their articles in E3S WOC must pay this fee for each accepted article.</p>
-
-                    <h4 class="mt-5 text-primary">Bank Account Payment:</h4>
-                    <p><strong>RIB:</strong> [Ajouter le RIB ici]</p>
-                    <p>The receipt of the bank transfer must be sent by mail to: <a href="mailto:icraeee25@gmail.com">icraeee25@gmail.com</a></p>
-
-                    <h4 class="mt-5 text-primary">Guidelines:</h4>
-                    <ul class="list-group">
-                        <li class="list-group-item"><strong>For Authors:</strong> At least one author of each accepted paper must be registered to ensure its inclusion in the conference proceedings and to schedule it for presentation, otherwise the papers will not be published.</li>
-                        <li class="list-group-item"><strong>Publication and Presentation Limit:</strong> For each registration, a maximum of one article will be published and presented. If authors wish to present more than one article, they must pay an additional fee for each extra article, with a limit of one additional article.</li>
-                        <li class="list-group-item"><strong>Individual Participation:</strong> One registration provides participation in the conference for only one person. If multiple authors wish to attend, each must register individually.</li>
-                    </ul>
+      <section id="Registration-fees" style="margin-top: 20px;" class="registration-fees py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="registration-container">
+                        <div class="section-title text-center">
+                            <h2 class="h2-title">Registration Fees</h2>
+                        </div>
+    
+                        <div class="table-responsive fees-table">
+                            <table class="table table-bordered text-center">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Fees (€)</th>
+                                        <th>Fees (DH)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>PhD Students</strong></td>
+                                        <td>100 €</td>
+                                        <td>1000 DH</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Postdoc fellows and PhD's</strong></td>
+                                        <td>125 €</td>
+                                        <td>1250 DH</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Academics</strong></td>
+                                        <td>150 €</td>
+                                        <td>1500 DH</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Industrials</strong></td>
+                                        <td>300 €</td>
+                                        <td>3000 DH</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+    
+                        <div class="registration-content">
+                            <h4>Registration fees include the following:</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="list-unstyled">
+                                        <li>✓ Conference Welcome Packet</li>
+                                        <li>✓ Attendance at all Technical Sessions</li>
+                                        <li>✓ Coffee breaks and Lunches</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="list-unstyled">
+                                        <li>✓ Conference Proceedings (USB)</li>
+                                        <li>✓ Hard Copy of the Conference Program Guide</li>
+                                        <li>✓ Certificate of Presentation/Participation</li>
+                                    </ul>
+                                </div>
+                            </div>
+    
+                            <h4 class="mt-4">Publication Fees:</h4>
+                            <p>For publication in E3S WOC, a fee of <strong>100 € (1000 DH)</strong> per accepted article applies. Participants wishing to publish their articles in E3S WOC must pay this fee for each accepted article.</p>
+    
+                            <div class="bank-payment">
+                                <h4>Bank Account Payment:</h4>
+                                <p><strong>RIB:</strong></p>
+                                <p>The receipt of the bank transfer must be sent by mail to: <a href="mailto:icraeee25@gmail.com">icraeee25@gmail.com</a></p>
+                            </div>
+    
+                            <h4 class="mt-4">Guidelines:</h4>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <strong>For Authors:</strong> At least one author of each accepted paper must be registered to ensure its inclusion in the conference proceedings and to schedule it for presentation, otherwise the papers will not be published.
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Publication and Presentation Limit:</strong> For each registration, a maximum of one article will be published and presented. If authors wish to present more than one article, they must pay an additional fee for each extra article, with a limit of one additional article.
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Individual Participation:</strong> One registration provides participation in the conference for only one person. If multiple authors wish to attend, each must register individually.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!--end of registration fee-->
-
-<div class="container my-5">
-    <div class="info-wp wow right-animation" data-wow-duration="1s">
-    <section id="submission-guidelines">
-        <h2 class="text-center mb-4">Submission Guidelines</h2>
-        <p>The official language of all the conferences and papers is English. Therefore, the paper must be written in English, which must be straightforward and free of grammatical errors.</p>
-
-        <h3 class="mt-4">Call for Papers</h3>
-        <p>ICRAEEE 2025 invites original contributions in the areas of Electrical and Electronic Engineering, Renewable Energy Systems and Energy Storage, Environmental Technology and Sustainable Practices, and Materials and Applications.</p>
-        <p>The conference aims to bring together researchers, engineers, and practitioners to discuss recent advancements and innovations in these key fields.</p>
-
-        <h3 class="mt-4">Important Dates</h3>
-        <ul class="list-unstyled">
-            <li><strong>Abstract Submission Deadline:</strong> July 30, 2025</li>
-            <li><strong>Full Paper Submission Deadline:</strong> August 30, 2025</li>
-            <li><strong>Notification of Acceptance:</strong> September 15, 2025</li>
-            <li><strong>Publication of the Program:</strong> November 15, 2025</li>
-            <li><strong>Conference Dates:</strong> December 11-12, 2025</li>
-        </ul>
-
-        <h3 class="mt-4">Paper Submission Instructions</h3>
-        
-        <h4>Abstract Submission</h4>
-        <ul class="list-unstyled">
-            <li>Authors must first submit an abstract of no more than 200 words.</li>
-            <li>The abstract should clearly outline the problem, methodology, results, and conclusions.</li>
-            <li>Authors will receive a notification regarding the abstract's acceptance within two weeks.</li>
-            <li>Abstracts must be sent by email to <a href="mailto:icraeee25@gmail.com">icraeee25@gmail.com</a>, specifying the topic of their presentation.</li>
-        </ul>
-
-        <h4>Full Paper Submission</h4>
-        <ul class="list-unstyled">
-            <li>Upon abstract acceptance, authors must submit the full paper by August 30, 2025.</li>
-            <li>All papers and abstracts must be submitted through the official <a href="https://icraeee25.sciencesconf.org/" target="_blank">ICRAEEE 2025 submission platform</a>.</li>
-            <li>Authors will need to create an account on the platform to submit their work.</li>
-            <li>Manuscripts should be at least 5 pages (including figures, tables, and references).</li>
-        </ul>
-
-        <h4>Review Process</h4>
-        <p>All submitted papers will undergo peer review by experts in the respective fields. The conference proceedings will include only accepted papers.</p>
-
-        <h4>Formatting and Style</h4>
-        <ul class="list-unstyled">
-            <li>Papers must be formatted according to the ICRAEEE conference template. The template is available on the conference website.</li>
-            <li><a href="Abstract_Template_ICRAEEE.docx" download>Download Abstract Template</a></li>
-            <li><a href="Full_paper_Template_ICRAEEE.docx" download>Download Full Paper Template</a></li>
-            <li>Authors must ensure proper citation of previous works and avoid plagiarism.</li>
-        </ul>
-
-        <h3 class="mt-4">Presentation Formats</h3>
-        <ul class="list-unstyled">
-            <li><strong>Oral Presentations:</strong> Authors of selected papers will be invited to present their work in oral sessions during the conference.</li>
-            <li><strong>Poster Presentations:</strong> Authors of papers that are not selected for oral presentation may be invited to present their work in poster format.</li>
-            <li>Presentation guidelines will be shared with authors upon acceptance.</li>
-        </ul>
-
-        <h3 class="mt-4">Conference Journals</h3>
-        <p>All accepted full papers will be published in the <strong>E2S Web of Conferences</strong> indexed in Scopus.</p>
-        <p>The papers selected from the accepted submissions will be published in one of the journals indexed in Scopus or Web of Science.</p>
-
-        <h3 class="mt-4">Contact Information</h3>
-        <p>For inquiries, please contact the conference organizing committee at:</p>
-        <p><strong>Email:</strong> <a href="mailto:icraeee25@gmail.com">icraeee25@gmail.com</a></p>
-        <p><strong>Website:</strong> <a href="https://icraeee25.sciencesconf.org/" target="_blank">icraeee25.sciencesconf.org</a></p>
-
-        <p>We look forward to your participation in ICRAEEE 2025 and anticipate a vibrant exchange of ideas and innovations in the fields of electronics, energy, and environmental technology!</p>
     </section>
-</div>
+
+    <section id="" class="registration-fees py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="submission-header text-center mb-5">
+                        <h2 class="display-6 fw-bold text-primary">Submission Guidelines</h2>
+                        <p class="text-muted text-center mt-3">ICRAEEE 2025 Conference Paper Submission Process</p>
+                    </div>
+    
+                    <div class="guidelines-section bg-light p-4 rounded-3">
+                        <p class="lead text-center mb-4">
+                            The official language of the conference is English. All papers must be clear, grammatically correct, and adhere to the provided guidelines.
+                        </p>
+    
+                        <div class="important-dates mb-4">
+                            <h3 class="h4 border-bottom pb-2 mb-3">Important Dates</h3>
+                            <ul class="list-unstyled">
+                                <li class="d-flex justify-content-between mb-2">
+                                    <strong>Abstract Submission Deadline:</strong> 
+                                    <span>July 30, 2025</span>
+                                </li>
+                                <li class="d-flex justify-content-between mb-2">
+                                    <strong>Full Paper Submission Deadline:</strong> 
+                                    <span>August 30, 2025</span>
+                                </li>
+                                <li class="d-flex justify-content-between mb-2">
+                                    <strong>Notification of Acceptance:</strong> 
+                                    <span>September 15, 2025</span>
+                                </li>
+                                <li class="d-flex justify-content-between mb-2">
+                                    <strong>Publication of the Program:</strong> 
+                                    <span>November 15, 2025</span>
+                                </li>
+                                <li class="d-flex justify-content-between">
+                                    <strong>Conference Dates:</strong> 
+                                    <span>December 11-12, 2025</span>
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <h3 class="h4 border-bottom pb-2 mb-3">Call for Papers</h3>
+                        <p>ICRAEEE 2025 invites original contributions in the following key areas:</p>
+                        <ul>
+                            <li>Electrical and Electronic Engineering</li>
+                            <li>Renewable Energy Systems and Energy Storage</li>
+                            <li>Environmental Technology and Sustainable Practices</li>
+                            <li>Materials and Applications</li>
+                        </ul>
+    
+                        <h3 class="h4 border-bottom pb-2 mb-3">Submission Process</h3>
+                        <ul>
+                            <li>Submit an abstract of no more than 200 words via email</li>
+                            <li>Receive abstract acceptance within two weeks</li>
+                            <li>Submit full paper through the official submission platform</li>
+                            <li>Manuscripts must be at least 5 pages long</li>
+                        </ul>
+    
+                        <div class="download-links text-center mt-4">
+                            <a href="./assets/Abstract_Template_ICRAEEE_2.docx" class="btn btn-outline-primary me-2" download>Download Abstract Template</a>
+                            <a href="./assets/Full_paper_Template_ICRAEEE.docx" class="btn btn-outline-primary" download>Download Full Paper Template</a>
+                        </div>
+    
+                        <div class="contact-section mt-4 text-center">
+                            <h3 class="h4 border-bottom pb-2 mb-3">Contact Information</h3>
+                            <p>
+                                <strong>Email:</strong> <a href="mailto:icraeee25@gmail.com">icraeee25@gmail.com</a><br>
+                                <strong>Website:</strong> <a href="https://icraeee25.sciencesconf.org/" target="_blank">icraeee25.sciencesconf.org</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 <script>
     function toggleAccordion(element) {
         let content = element.nextElementSibling;
