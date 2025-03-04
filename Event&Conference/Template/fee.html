@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>ICRAEEE 2025</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="imEvent - Responsive HTML5 Template">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Favicon Link -->
+    <link rel="icon" href="assets/images/logo1R.png" type="image/gif" sizes="16x16">
+
+    <!-- Bootstrap CSS Link -->
+    <link rel="stylesheet" href="assets/css/bootstrap-4.5.2.min.css">
+
+    <!-- Google Font Link -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Saira:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Wow Animation CSS Link -->
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+
+    <!-- Slick Slider CSS Link -->
+    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css" />
+
+    <!-- Main Style CSS Link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+              body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        #Registration-fees {
+            background-color: #f8f9fa;
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+    
+        .registration-container {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 40px;
+            position: relative;
+            z-index: 2;
+        }
+    
+        .section-title h2 {
+            color: #007bff;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+    
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, #007bff, #00d4ff);
+        }
+    
+        .fees-table {
+            margin-bottom: 30px;
+        }
+    
+        .fees-table thead {
+            background: linear-gradient(to right, #007bff, #00d4ff);
+            color: white;
+        }
+    
+        .fees-table th, .fees-table td {
+            vertical-align: middle;
+            padding: 15px;
+        }
+    
+        .fees-table tbody tr:nth-child(even) {
+            background-color: #f1f6ff;
+        }
+    
+        .fees-table tbody tr:hover {
+            background-color: #e6f2ff;
+            transition: background-color 0.3s ease;
+        }
+    
+        .registration-content {
+            background-color: #f0f8ff;
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 30px;
+        }
+    
+        .registration-content h4 {
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+    
+        .registration-content ul.list-group {
+            margin-top: 20px;
+        }
+    
+        .registration-content .list-group-item {
+            background-color: white;
+            border: 1px solid #dee2e6;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            padding: 15px;
+        }
+    
+        .registration-content .list-group-item strong {
+            color: #007bff;
+            margin-right: 10px;
+        }
+    
+        .bank-payment {
+            background-color: #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    
+        @media (max-width: 768px) {
+            .registration-container {
+                padding: 20px;
+            }
+    
+            .fees-table {
+                font-size: 14px;
+            }
+        }
+
+        #submission-guidelines {
+            background-color: #f8f9fa;
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+    
+        #submission-guidelines::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, #007bff 0%, #00d4ff 100%);
+            opacity: 0.1;
+            transform: rotate(45deg);
+            z-index: 1;
+        }
+    
+        .submission-container {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+            padding: 40px;
+            position: relative;
+            z-index: 2;
+        }
+    
+        .submission-header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+    
+        .submission-header h2 {
+            color: #007bff;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+    
+        .submission-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, #007bff, #00d4ff);
+        }
+    
+        .guidelines-section {
+            margin-bottom: 30px;
+        }
+    
+        .guidelines-section h3 {
+            color: #007bff;
+            border-left: 4px solid #007bff;
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+    
+        .guidelines-section ul {
+            padding-left: 30px;
+        }
+    
+        .guidelines-section li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 25px;
+        }
+    
+        .guidelines-section li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #007bff;
+            font-weight: bold;
+            font-size: 1.5em;
+            line-height: 1;
+        }
+    
+        .important-dates {
+            background-color: #f0f8ff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+    
+        .important-dates li {
+            margin-bottom: 10px;
+            color: #0056b3;
+        }
+    
+        .contact-section {
+            background-color: #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+    
+        .download-links a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+    
+        .download-links a:hover {
+            background-color: #0056b3;
+        }
+    
+        @media (max-width: 768px) {
+            #submission-guidelines::before {
+                display: none;
+            }
+    
+            .submission-container {
+                padding: 20px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="site-branding">
+                        <a href="index.html" class="custom-logo-link" title="imEvent">
+                            <img src="assets/images/logo1R.png" alt="header-logo" width="138" height="51">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="header-main">
+                        <nav class="main-navigation">
+                            <div class="for-mob">
+                                <button class="menu-toggle">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                            <div class="for-mob">
+                                <a href="tel:123456789" title="Call 123-456-789" class="mob-phone">
+                                    <i class="fas fa-phone"></i>
+                                </a>
+                            </div>
+                            
+                            <div class="header-menu">
+                                <div class="menu-menu-1-container" >
+                                    <ul class="menu nav-menu" >
+                                        <li ><a style="color: #33aceb;" href="index.html" title="Home">Home</a></li>
+                                        <li><a  style="color: #33aceb;"href="index.html#about" title="About Us">About Us</a></li>
+                                        <li ><a style="color: #33aceb;" href="index.html#topic" title="Topices">Topices</a></li>
+                                        <li><a style="color: #33aceb;" href="index.html#speakers" title="Speakers">Speakers</a></li>
+                                        <li><a style="color: #33aceb;" href="index.html#contact-us" title="index.html#Contact Us">Contact Us</a></li>
+                                        <li><a style="color: #33aceb;" href="committer.html" title="Committer">Committer</a></li>
+                                        <li class="active"><a  style="color: #33aceb;" href="fee.html" title="Registration fees"> fees</a></li>
+                                        <li><a style="color: #33aceb;" href="./Conference.html" title="Blog">Blog</a></li>
+
+                                    </ul>
+                                </div>
+                                <div class="for-mob">
+                                    <div class="social-wp">
+                                        <div class="social-icon">
+                                            <ul>
+                                                <li>
+                                                    <a href="javascript:void(0)" title="Twitter">
+                                                        <i class="fab fa-twitter"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)" title="Facebook">
+                                                        <i class="fab fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)" title="Instagram">
+                                                        <i class="fab fa-instagram"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)" title="LinkdIn">
+                                                        <i class="fab fa-linkedin-in"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="info-wp">
+                                            <ul>
+                                                <li>
+                                                    <a href="tel:180045678923" title="Call 1-800-456-478-23">
+                                                        <span><i class="fas fa-phone"></i></span> 1-800-456-478-23
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="mailto:imevent@gmail.com" title="imevent@gmail.com">
+                                                        <span><i class="far fa-envelope"></i></span> imevent@gmail.com
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--header -->
+      <!-- Registration fees Start -->
+      <section id="Registration-fees" style="margin-top: 20px;" class="registration-fees py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="registration-container">
+                        <div class="section-title text-center">
+                            <h2 class="h2-title">Registration Fees</h2>
+                        </div>
+    
+                        <div class="table-responsive fees-table">
+                            <table class="table table-bordered text-center">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Fees (€)</th>
+                                        <th>Fees (DH)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>PhD Students</strong></td>
+                                        <td>100 €</td>
+                                        <td>1000 DH</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Postdoc fellows and PhD's</strong></td>
+                                        <td>125 €</td>
+                                        <td>1250 DH</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Academics</strong></td>
+                                        <td>150 €</td>
+                                        <td>1500 DH</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Industrials</strong></td>
+                                        <td>300 €</td>
+                                        <td>3000 DH</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+    
+                        <div class="registration-content">
+                            <h4>Registration fees include the following:</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="list-unstyled">
+                                        <li>✓ Conference Welcome Packet</li>
+                                        <li>✓ Attendance at all Technical Sessions</li>
+                                        <li>✓ Coffee breaks and Lunches</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="list-unstyled">
+                                        <li>✓ Conference Proceedings (USB)</li>
+                                        <li>✓ Hard Copy of the Conference Program Guide</li>
+                                        <li>✓ Certificate of Presentation/Participation</li>
+                                    </ul>
+                                </div>
+                            </div>
+    
+                            <h4 class="mt-4">Publication Fees:</h4>
+                            <p>For publication in E3S WOC, a fee of <strong>100 € (1000 DH)</strong> per accepted article applies. Participants wishing to publish their articles in E3S WOC must pay this fee for each accepted article.</p>
+    
+                            <div class="bank-payment">
+                                <h4>Bank Account Payment:</h4>
+                                <p><strong>RIB:</strong></p>
+                                <p>The receipt of the bank transfer must be sent by mail to: <a href="mailto:icraeee25@gmail.com">icraeee25@gmail.com</a></p>
+                            </div>
+    
+                            <h4 class="mt-4">Guidelines:</h4>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <strong>For Authors:</strong> At least one author of each accepted paper must be registered to ensure its inclusion in the conference proceedings and to schedule it for presentation, otherwise the papers will not be published.
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Publication and Presentation Limit:</strong> For each registration, a maximum of one article will be published and presented. If authors wish to present more than one article, they must pay an additional fee for each extra article, with a limit of one additional article.
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Individual Participation:</strong> One registration provides participation in the conference for only one person. If multiple authors wish to attend, each must register individually.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="" class="registration-fees py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 mx-auto">
+                    <div class="submission-header text-center mb-5">
+                        <h2 class="display-6 fw-bold text-primary">Submission Guidelines</h2>
+                        <p class="text-muted text-center mt-3">ICRAEEE 2025 Conference Paper Submission Process</p>
+                    </div>
+    
+                    <div class="guidelines-section bg-light p-4 rounded-3">
+                        <p class="lead text-center mb-4">
+                            The official language of the conference is English. All papers must be clear, grammatically correct, and adhere to the provided guidelines.
+                        </p>
+    
+                        <div class="important-dates mb-4">
+                            <h3 class="h4 border-bottom pb-2 mb-3">Important Dates</h3>
+                            <ul class="list-unstyled">
+                                <li class="d-flex justify-content-between mb-2">
+                                    <strong>Abstract Submission Deadline:</strong> 
+                                    <span>July 30, 2025</span>
+                                </li>
+                                <li class="d-flex justify-content-between mb-2">
+                                    <strong>Full Paper Submission Deadline:</strong> 
+                                    <span>August 30, 2025</span>
+                                </li>
+                                <li class="d-flex justify-content-between mb-2">
+                                    <strong>Notification of Acceptance:</strong> 
+                                    <span>September 15, 2025</span>
+                                </li>
+                                <li class="d-flex justify-content-between mb-2">
+                                    <strong>Publication of the Program:</strong> 
+                                    <span>November 15, 2025</span>
+                                </li>
+                                <li class="d-flex justify-content-between">
+                                    <strong>Conference Dates:</strong> 
+                                    <span>December 11-12, 2025</span>
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <h3 class="h4 border-bottom pb-2 mb-3">Call for Papers</h3>
+                        <p>ICRAEEE 2025 invites original contributions in the following key areas:</p>
+                        <ul>
+                            <li>Electrical and Electronic Engineering</li>
+                            <li>Renewable Energy Systems and Energy Storage</li>
+                            <li>Environmental Technology and Sustainable Practices</li>
+                            <li>Materials and Applications</li>
+                        </ul>
+    
+                        <h3 class="h4 border-bottom pb-2 mb-3">Submission Process</h3>
+                        <ul>
+                            <li>Submit an abstract of no more than 200 words via email</li>
+                            <li>Receive abstract acceptance within two weeks</li>
+                            <li>Submit full paper through the official submission platform</li>
+                            <li>Manuscripts must be at least 5 pages long</li>
+                        </ul>
+    
+                        <div class="download-links text-center mt-4">
+                            <a href="./assets/Abstract_Template_ICRAEEE_2.docx" class="btn btn-outline-primary me-2" download>Download Abstract Template</a>
+                            <a href="./assets/Full_paper_Template_ICRAEEE.docx" class="btn btn-outline-primary" download>Download Full Paper Template</a>
+                        </div>
+    
+                        <div class="contact-section mt-4 text-center">
+                            <h3 class="h4 border-bottom pb-2 mb-3">Contact Information</h3>
+                            <p>
+                                <strong>Email:</strong> <a href="mailto:icraeee25@gmail.com">icraeee25@gmail.com</a><br>
+                                <strong>Website:</strong> <a href="https://icraeee25.sciencesconf.org/" target="_blank">icraeee25.sciencesconf.org</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<script>
+    function toggleAccordion(element) {
+        let content = element.nextElementSibling;
+        let plusSign = element.querySelector('.plus-sign');
+
+        if (content.style.display === "block") {
+            content.style.display = "none";
+            plusSign.classList.remove("rotated");
+        } else {
+            content.style.display = "block";
+            plusSign.classList.add("rotated");
+        }
+    }
+</script>
+
+    <!-- Scroll To Top -->
+    <a href="#main-banner" id="scrollToTop" class="scrolltop" title="Back To Top" style="display: none;"><i class="fas fa-angle-double-up"></i></a>
+    <!-- Scroll To Top End -->
+
+    <!-- Jquery JS Link -->
+    <script src="assets/js/jquery-3.5.1.min.js "></script>
+
+    <!-- Bootstrap JS Link -->
+    <script src="assets/js/bootstrap-4.5.2.min.js "></script>
+
+    <!-- Popper JS Link -->
+    <script src="assets/js/popper-1.16.0.min.js"></script>
+
+    <!-- Font Awsome JS Link -->
+    <script src="assets/js/font-awesome.min.js"></script>
+
+    <!-- Wow Animation JS Link -->
+    <script src="assets/js/wow.js "></script>
+
+    <!-- Slick Slider JS Link -->
+    <script src="assets/js/slick.min.js "></script>
+
+    <!-- Custom JS Link -->
+    <script src="assets/js/custom.js "></script>
+
+</body>
+</html>

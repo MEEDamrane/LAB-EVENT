@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ICRAEEE 2025</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="imEvent - Responsive HTML5 Template">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Favicon Link -->
+    <link rel="icon" href="assets/images/logo1R.png" type="image/gif" sizes="16x16">
+
+    <!-- Bootstrap CSS Link -->
+    <link rel="stylesheet" href="assets/css/bootstrap-4.5.2.min.css">
+
+    <!-- Google Font Link -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Saira:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Wow Animation CSS Link -->
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+
+    <!-- Slick Slider CSS Link -->
+    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css" />
+
+    <!-- Main Style CSS Link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .accordion {
+            max-width: 100%;
+            margin: 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .accordion-title {
+            background-color: #f8f8f8;
+            padding: 15px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .accordion-title:hover {
+            background-color: #eaeaea;
+        }
+
+        .accordion-content {
+            display: none;
+            padding: 15px;
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+        }
+
+        .accordion-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .accordion-content li {
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .accordion-content li:last-child {
+            border-bottom: none;
+        }
+
+        .plus-sign {
+            font-size: 22px;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .rotated {
+            transform: rotate(45deg);
+        }
+        .important-dates {
+            font-size: 25px;
+        }
+        .h2-t {
+            color: white;
+            text-transform: uppercase;
+            font-size: clamp(2rem, 4vw, 3rem);
+          }
+
+          @media (max-width: 600px) {
+            .h2-t {
+              font-size: 1.8rem;
+            }
+          }
+          
+          .h2-t mark {
+            color: white;
+            background: none;
+            text-decoration: underline;
+            font-weight: bold;
+          }
+          
+          .h2-t mark:nth-of-type(1) {
+            text-decoration-color: #ffcc00;
+          }
+          
+          .h2-t mark:nth-of-type(2) {
+            text-decoration-color: red;
+          }
+          
+          .h2-t mark:nth-of-type(3) {
+            text-decoration-color: green;
+          }
+
+          .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80%;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .popup-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .popup-image {
+            width: 120px;
+            height: 120px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .popup-title {
+            margin: 0;
+        }
+
+        .popup-bio {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Loader Start -->
+    <div class="loader" id="loader">
+        <div class="spinner">
+            <div class="spinner-container container1">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+                <div class="circle4"></div>
+            </div>
+            <div class="spinner-container container2">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+                <div class="circle4"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Loader End -->
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="site-branding">
+                        <a href="index.html" class="custom-logo-link" title="imEvent">
+                            <img src="assets/images/logo1R.png" alt="header-logo" width="138" height="51">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="header-main">
+                        <nav class="main-navigation">
+                            <div class="for-mob">
+                                <button class="menu-toggle">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                            <div class="for-mob">
+                                <a href="tel:123456789" title="Call 123-456-789" class="mob-phone">
+                                    <i class="fas fa-phone"></i>
+                                </a>
+                            </div>
+                            
+                            <div class="header-menu">
+                                <div class="">
+                                    <ul class="menu nav-menu">
+                                        <li class="active"><a href="index.html" title="Home">Home</a></li>
+                                        <li><a href="#about" title="About Us">About Us</a></li>
+                                        <li><a href="#topic" title="Speakers">Topices</a></li>
+                                        <li><a href="#speakers" title="Speakers">Speakers</a></li>
+                                        <li><a href="#contact-us" title="Contact Us">Contact Us</a></li>
+                                        <li><a href="committer.html" title="Committer">Committer</a></li>
+                                        <li><a href="fee.html" title="Registration fees"> fees</a></li>
+                                        <li><a href="./Conference.html" title="Blog">Blog</a></li>
+                                    </ul>
+                                </div>
+                                <div class="for-mob">
+                                    <div class="social-wp">
+                                        <div class="social-icon">
+                                            <ul>
+                                                <li>
+                                                    <a href="javascript:void(0)" title="Twitter">
+                                                        <i class="fab fa-twitter"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)" title="Facebook">
+                                                        <i class="fab fa-facebook-f"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)" title="Instagram">
+                                                        <i class="fab fa-instagram"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)" title="LinkdIn">
+                                                        <i class="fab fa-linkedin-in"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="info-wp">
+                                            <ul>
+                                                <li>
+                                                    <a href="tel:180045678923" title="Call 1-800-456-478-23">
+                                                        <span><i class="fas fa-phone"></i></span> 1-800-456-478-23
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="mailto:imevent@gmail.com" title="imevent@gmail.com">
+                                                        <span><i class="far fa-envelope"></i></span> imevent@gmail.com
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Main Banner Start -->
+    <section id="main-banner" class="main-banner" style="background-image: url('assets/images/Forteresse_Jadida.jpg');">
+        <div class="banner-video">
+            <video autoplay="" loop="" muted=""> 
+                <source src="assets/images/banner-video/cinematic_4k_el_jadida.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="sec-wp">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <div class="banner-text-wp wow left-animation" data-wow-duration="1s">
+                            <h3 class="h3-title">First International Conference on</h3>
+                            <h2 class="h2-t">Research and Advancements in<mark>Electronics</mark>,<mark>Energy</mark> and<mark>Environment</mark></h2>
+                            <div class="banner-text">
+                                <p style="font-size: 25px;"><b> ICRA<span style="color: yellow;">E</span><span style="color: red;">E</span><span style="color: green;">E</span>2025</b></p>
+                            </div>
+                            <div class="banner-btn">
+                                <a href="javascript:void(0)" class="sec-btn" title="Get Tickets">Get Tickets</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Main Banner -->
+
+    <!-- About Us Start -->
+    <section id="about" class="about-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="about-us-text-wp wow left-animation" data-wow-duration="1s">
+                        <h4>Welcome to <span>ICRAEEE 2025</span></h4>
+                        <h2 class="h2-title text-custom">No.1 EVENTS MANAGEMENT</h2>
+
+                        <div class="about-us-text">
+                            <p>
+                                <span style="color: #2382C8;">ICRAEEE 2025</span> is an innovative conference organized by the research structure <span style="color:#ffbf00 ;">"Sciences and Technologies of Information and Communication Laboratory (STIC)"</span>  at Faculty of Sciences, Chouaib Doukkali University, Morocco, dedicated to showcasing pioneering research and advancements in Electronics, Energy, and Environmental Science. In response to growing global concerns about sustainable energy and environmental impact, this conference aims to unite researchers, professionals, and students across diverse fields to share knowledge, foster advancements, and explore sustainable solutions for the future.
+                            </p>
+                            <p>
+                                All full papers submitted to <span style="color: #2382C8;">ICRAEEE 2025</span> will be rigorously peer-reviewed and evaluated based on originality, technical quality, research depth, accuracy, relevance to conference themes, contributions, and readability. Quality articles will be published in well-reputed journals like Scopus Indexed or Web of Science.
+                            </p>
+                            <p>
+                                The organizing committee warmly invites researchers, engineers, academics, and industry professionals to participate in <span style="color: #2382C8;">ICRAEEE 2025</span> and to join this significant international scientific event. We look forward to welcoming you to El Jadida and to engaging with you at the conference!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Info Start -->
+    <section id="dates" class="info-sec" style="background-image: url('assets/images/info-img.jpg');">
+        <div class="sec-wp">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="info-text-wp">
+                            <h3 class="h3-title wow fadeup-animation" data-wow-duration="1s">Save the day</h3>
+                            <h2 class="h2-title wow fadeup-animation" data-wow-duration="1.2s">Conference Dates: 11-12 December 2025</h2>
+    
+                            <!-- Conference Dates Countdown -->
+                            <div class="info-count-down-box-wp wow fadeup-animation" data-wow-duration="1.4s">
+                                <div class="countdown-timer d-flex justify-content-center">
+                                    <div class="box ">
+                                        <span id="days" class="time">00</span>
+                                        <span class="days"> <span>Days</span></span>
+                                    </div>
+                                    <div class="box mx-2">
+                                        <span id="hours" class="time">00</span>
+                                        <span class="days"><span>Hours</span></span>
+                                    </div>
+                                    <div class="box mx-2">
+                                        <span id="minutes" class="time">00</span>
+                                        <span class="days"><span>Minutes</span></span>
+                                    </div>
+                                    <div class="box mx-2">
+                                        <span id="seconds" class="time">00</span>
+                                        <span class="days"><span>Seconds</span></span>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="important-dates wow fadeup-animation mt-5 p-4 rounded shadow-lg" data-wow-duration="1.6s">
+                                <h3 class="h3-title mb-3 fw-bold text-center">Important Dates</h3>
+                                <ul class="list-unstyled text-light fs-5">
+                                    <li><strong>Abstract Submission Deadline:</strong> 1st September 2025</li>
+                                    <li><strong>Full Paper Submission Deadline:</strong> 1st October 2025</li>
+                                    <li><strong>Notification of Acceptance:</strong> 15th October 2025</li>
+                                    <li><strong>Publication of the Program:</strong> 15th November 2025</li>
+                                </ul>
+                            </div>
+
+    
+                            <!-- Register Button -->
+                            <div class="info-text-btn wow fadeup-animation mt-4" data-wow-duration="1.8s">
+                                <a href="javascript:void(0)" class="sec-btn btn-gradient" title="Register Now">Register Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Info -->
+    
+    <!-- topic -->
+    <section id="topic" class="about-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="about-us-text-wp wow left-animation" data-wow-duration="1s">
+                        <h2>Topics </h2>
+                        <h5 class="h2-title text-custom">ICRAEEE 2025: A Platform for Knowledge Exchange and Innovation</h5>
+
+                        <div class="about-us-text">
+                            <p>
+                                ICRAEEE 2025 is dedicated to creating a vibrant platform for researchers, practitioners, and industry experts to engage in meaningful discussions and share the latest advancements in the fields of Electronics, Energy, Materials Science, Environmental Sciences, and related disciplines. 
+                                The conference aims to foster an enriching environment where participants can exchange innovative ideas, showcase their research findings, and explore collaborative opportunities to address emerging challenges in these dynamic fields.
+
+                                The event will include a diverse program featuring distinguished invited speakers who will provide insights into cutting-edge developments, thought-provoking oral presentations, and interactive poster sessions. 
+                                These sessions will cover a wide range of topics and thematic issues, ensuring a comprehensive exploration of the conference's focus areas.
+
+                                By bringing together a multidisciplinary audience, ICRAEEE 2025 aspires to inspire groundbreaking research, drive technological innovation, and strengthen connections within the scientific and industrial communities.
+                            </p>
+
+                            <p><b>A comprehensive two-day program will focus on the following four key areas, and the papers may include, but are not limited to, the following topics:</b></p>
+                        </div>
+                        <div class="accordion">
+                            <div class="accordion-title" onclick="toggleAccordion(this)">
+                                Electrical and Electronic Engineering
+                                <span class="plus-sign">+</span>
+                            </div>
+                            <div class="accordion-content">
+                                <ul>
+                                    <li>Electrical and electronic engineering</li>
+                                    <li>Power Electronics and Applications</li>
+                                    <li>Electronics Devices, Circuits and Systems</li>
+                                    <li>Nanotechnology and Microelectronics</li>
+                                    <li>Quantum Computing and Electronics</li>
+                                    <li>Optoelectronics and Photonics</li>
+                                    <li>RF, Microwaves, Wireless and Optical Communication</li>
+                                    <li>Robotics, Control, Automation and Instrumentation</li>
+                                    <li>Signal Processing and Audio/Video Applications</li>
+                                    <li>Wireless Communication Technologies</li>
+                                    <li>5G and 6G Technology</li>
+                                    <li>Smart Sensors and Environmental Monitoring Devices</li>
+                                    <li>Electronic Systems Security and Data Protection</li>
+                                    <li>Electromagnetic Wave Propagation in Advanced Materials</li>
+                                    <li>Artificial Intelligence in Electronics Design</li>
+                                    <li>Artificial Intelligence, Embedded Systems, Machine Learning and IoT</li>
+                                    <li>Smart Grids and Energy Distribution</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="accordion">
+                            <div class="accordion-title" onclick="toggleAccordion(this)">
+                                Renewable energy systems and energy storage
+                                <span class="plus-sign">+</span>
+                            </div>
+                            <div class="accordion-content">
+                                <ul>
+                                    <li>Renewable Energy Technologies (Photovoltaic, Wind, Hydrogen, Hydropower, Geothermal, Biomass. etc)</li>
+                                    <li>Energy Storage Systems (Batteries, Supercapacitors, etc.)</li>
+                                    <li>Hybrid Energy Systems</li>
+                                    <li>Thermal energy</li>
+                                    <li>Renewable Energy Transition</li>
+                                    <li>Smart Grids</li>
+                                    <li>Electrification of Transport Systems</li>
+                                    <li>Green Building Technologies and Energy Efficiency</li>
+                                    <li>Ocean Energy and Tidal Power Systems</li>
+                                    <li>Artificial Intelligence and Machine Learning for Energy Optimization</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="accordion">
+                            <div class="accordion-title" onclick="toggleAccordion(this)">
+                                Environmental Technology and sustainable practices
+                                <span class="plus-sign">+</span>
+                            </div>
+                            <div class="accordion-content">
+                                <ul>
+                                    <li>Environmental Remote Sensing Applications</li>
+                                    <li>Air Pollution and Treatment</li>
+                                    <li>Water and Waste Treatment</li>
+                                    <li>Water desalination</li>
+                                    <li>Decarbonization Technologies</li>
+                                    <li>Decarbonization Strategies</li>
+                                    <li>Environmental Education</li>
+                                    <li>Climate Change Adaption and Resilience</li>
+                                    <li>Energy Efficiency and Best Practices</li>
+                                    <li>Sustainable Cities, Infrastructure, and Transportation</li>
+                                    <li>Green Building and Design</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="accordion">
+                            <div class="accordion-title" onclick="toggleAccordion(this)">
+                                Materials and applications
+                                <span class="plus-sign">+</span>
+                            </div>
+                            <div class="accordion-content">
+                                <ul>
+                                    <li>Electrical and electronic engineering</li>
+                                    <li>Advanced materials synthesis and characterization techniques</li>
+                                    <li>Nanomaterials and nanotechnology applications</li>
+                                    <li>Biomaterials and biomedical applications</li>
+                                    <li>Functional materials for energy storage and conversion</li>
+                                    <li>DFT and TDFT application in hydrogen storage and solar cell</li>
+                                    <li>Structural materials and their applications in engineering</li>
+                                    <li>Sustainable materials and green manufacturing processes</li>
+                                    <li>Composite materials and their multifunctional applications</li>
+                                    <li>Organic materials, polymers and inorganic materials and their applications</li>
+                                    <li>Smart materials and their applications in sensors and actuators</li>
+                                    <li>Materials for water treatment</li>
+                                    <li>Materials and agriculture</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Start -->
+    <section id="speakers" class="event-sec">
+        <div class="sec-wp">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4">
+                        <div class="sec-title wow left-animation" data-wow-duration="1s">
+                            <h2 class="h2-title">Our Speakers</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-schedual-box-wp tab-content">
+                    <div class="tab-pane fade show active" id="musicEvent">
+                        <div class="row event-row">
+                            <div class="col-lg-6">
+                                <div class="schedual-box-wp wow left-animation" data-wow-duration="1s">
+                                    <div class="schedual-text-wp">
+                                        <h3 class="h4-title">Prof. Mousa Marzband</h3>
+                                        <p><span>Northumbria University,</span> <br> United Kingdom</p>
+                                        <div class="event-btn">
+                                            <a href="#" class="sec-btn read-more-btn" data-name="Mousa Marzband" data-university="Northumbria University" data-country="United Kingdom" data-image="assets/images/download.png">read more</a>
+                                        </div>
+                                    </div>
+                                    <div class="schedual-img-wp" style="width:fit-content;">
+                                        <div class="schedual-img" style="background-image: url('assets/images/download.png');" ></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="schedual-box-wp wow right-animation" data-wow-duration="1s">
+                                    <div class="schedual-text-wp">
+                                        <h3 class="h4-title">Dr. Tarik Kamal</h3>
+                                        <p><span>Vaasa University </span> <br> Finland</p>
+                                        <div class="event-btn">
+                                            <a href="#" class="sec-btn read-more-btn" data-name="Tarik Kamal" data-university="Vaasa University" data-country="Finland" data-image="assets/images/download (1).png">read more</a>
+                                        </div>
+                                    </div>
+                                    <div class="schedual-img-wp">
+                                        <div class="schedual-img" style="background-image: url('assets/images/download (1).png');"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row event-row">
+                            <div class="col-lg-6">
+                                <div class="schedual-box-wp wow left-animation" data-wow-duration="1s">
+                                    <div class="schedual-text-wp">
+                                        <h3 class="h4-title"> Prof. Monica Siroux</h3>
+                                        <p><span>University of Strasbourg</span> <br> France</p>
+                                        <div class="event-btn">
+                                            <a href="#" class="sec-btn read-more-btn" data-name="Monica Siroux" data-university="University of Strasbourg" data-country="France" data-image="assets/images/download (2).png">read more</a>
+                                        </div>
+                                    </div>
+                                    <div class="schedual-img-wp">
+                                        <div class="schedual-img" style="background-image: url('assets/images/download (2).png');"></div>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            <div class="col-lg-6">
+                                <div class="schedual-box-wp wow right-animation" data-wow-duration="1s">
+                                    <div class="schedual-text-wp">
+                                        <h2 class="h4-title">Prof. Lahoucine Atourki</h2>
+                                        <p><span>Prof. Lahoucine Atourki</span><br> Morocco</p>
+                                        <div class="event-btn">
+                                            <a href="#" class="sec-btn read-more-btn" data-name="Lahoucine Atourki" data-university="University" data-country="Morocco" data-image="assets/images/download (3).png">read more</a>
+                                        </div>
+                                    </div>
+                                    <div class="schedual-img-wp">
+                                        <div class="schedual-img" style="background-image: url('assets/images/download (3).png');"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Popup Container -->
+     <div class="popup-overlay">
+        <div class="popup-content">
+            <span class="popup-close">&times;</span>
+            <div class="popup-header">
+                <div class="popup-image"></div>
+                <div>
+                    <h2 class="popup-title"></h2>
+                    <p class="popup-subtitle"></p>
+                </div>
+            </div>
+            <div class="popup-bio">
+                <h3>Biography</h3>
+                <p class="biography-text">
+                    <!-- Dynamically populated biography text -->
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sponsors Start -->
+    <section id="sponsors" class="sponsors-sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-lg-center">
+                    <div class="sec-title wow left-animation" data-wow-duration="1s">
+                        <h2 class="h2-title">Our Sponsors</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row sponsors-slider-wp wow fadeup-animation" data-wow-duration="1s">
+                <div class="col-lg-3">
+                    <div class="sponsor-slider-box">
+                        <img src="assets/images/sponsor-1.png" alt="Powerade" width="223" height="80">
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="sponsor-slider-box">
+                        <img src="assets/images/sponsor2.png" alt="Bose" width="223" height="190">
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="sponsor-slider-box">
+                        <img src="assets/images/SPONSOR4.png" alt="Tofas" width="223" height="190">
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="sponsor-slider-box">
+                        <img src="assets/images/ucdpng.png" alt="Powerade" width="224" height="180">
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="sponsor-slider-box">
+                        <img src="assets/images/SPONSOR3.jpg" alt="Bose" width="223" height="190">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Sponsors -->
+
+    <!-- Footer Start -->
+    <footer id="contact-us" class="site-footer">
+        <div class="top-footer">
+            <div class="for-des">
+                <div class="contact-us-img-wp">
+                    <div class="contact-us-img" style="background-image: url('assets/images/contact-us.jpg');"></div>
+                </div>
+            </div>
+            <div class="sec-wp">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-5 col-lg-6">
+                            <div class="for-mob">
+                                <div class="contact-us-img-wp">
+                                    <div class="contact-us-img" style="background-image: url('assets/images/contact-us.jpg');"></div>
+                                </div>
+                            </div>
+                            <div class="contact-us-form wow left-animation" data-wow-duration="1s">
+                                <form class="contact-form">
+                                    <h2 class="h2-title">Contact Us</h2>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <span class="wpcf7-form-control-wrap">
+                                                <input type="text" class="form-input" placeholder="Your Name" name="FullName" required>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <span class="wpcf7-form-control-wrap">
+                                                <input type="text" class="form-input" placeholder="Your Email" name="Email" required>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <span class="wpcf7-form-control-wrap">
+                                                <input type="text" class="form-input" placeholder="Your Phone" name="Phone" required>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <span class="wpcf7-form-control-wrap your-message">
+                                                <textarea name="Message" class="wpcf7-form-control wpcf7-textarea form-input" placeholder="Message"></textarea>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="submit-btn">
+                                                <button type="submit" class="sec-btn">Submit</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-us-map-wp">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3337.5702360051296!2d-8.488757924249446!3d33.22536137347953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda91e1d173ae243%3A0x4fa699b9874f3eab!2sFacult%C3%A9%20des%20Sciences%20d&#39;el%20Jadida%20-%20UCD!5e0!3m2!1sfr!2sma!4v1740264443754!5m2!1sfr!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="bottom-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copyright">
+                            <div class="copyright-text">
+                                <p>&copy; copyright 2025, All Rights Reserved</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+<!-- Bootstrap CSS -->
+
+
+
+    <script>
+        function toggleAccordion(element) {
+            let content = element.nextElementSibling;
+            let plusSign = element.querySelector('.plus-sign');
+
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                plusSign.classList.remove("rotated");
+            } else {
+                content.style.display = "block";
+                plusSign.classList.add("rotated");
+            }
+        }
+    </script>
+
+    <script>
+        // Set the conference date we're counting down to
+        const conferenceDate = new Date("December 11, 2025 00:00:00").getTime();
+    
+        // Update the countdown every 1 second
+        const countdownInterval = setInterval(function() {
+            // Get today's date and time
+            const now = new Date().getTime();
+    
+            // Find the distance between now and the conference date
+            const distance = conferenceDate - now;
+    
+            // Time calculations for days, hours, minutes, and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+            // Output the result in the elements with the corresponding IDs
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+    
+            // If the countdown is over, stop it
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("days").innerHTML = "0";
+                document.getElementById("hours").innerHTML = "0";
+                document.getElementById("minutes").innerHTML = "0";
+                document.getElementById("seconds").innerHTML = "0";
+            }
+        }, 1000);
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const readMoreBtns = document.querySelectorAll('.read-more-btn');
+            const popupOverlay = document.querySelector('.popup-overlay');
+            const popupClose = document.querySelector('.popup-close');
+            const popupImage = document.querySelector('.popup-image');
+            const popupTitle = document.querySelector('.popup-title');
+            const popupSubtitle = document.querySelector('.popup-subtitle');
+            const biographyText = document.querySelector('.biography-text');
+            
+
+            // Speaker details (you can expand these)
+            const speakerBios = {
+                'Mousa Marzband': {
+                    biography: 'Prof. Mousa Marzband is an esteemed academic and researcher with joint affiliations at Northumbria University, UK, and King Abdulaziz University, Saudi Arabia. With a distinguished career spanning several years, Prof. Marzband has established himself as a leading authority in the fields of smart grids, renewable energy systems, and energy storage technologies. His research focuses on the integration of distributed energy resources (DERs), photovoltaic (PV) systems, and electric vehicles (EVs) into modern energy networks, with an emphasis on sustainability, efficiency, and economic viability. Prof. Marzband has authored numerous high-impact publications in leading journals and conferences, addressing critical challenges in energy management, demand response, and grid stability. His work bridges the gap between theoretical advancements and practical applications, making significant contributions to the development of intelligent, adaptive systems for future energy networks.'
+                },
+                'Tarik Kamal': {
+                    biography: "Dr. Tariq Kamal is a leading expert in energy and sustainable engineering, holding doctorates from the University of Cadiz, Technical University of Munich, Germany, and Sakarya University. As Assistant Professor and head of the Power Electronics and Control Group at the University of Vaasa, Finland, he conducts pioneering research in intelligent control, renewable energy systems, electric vehicles, and smart grid integration.  Dr. Kamal's work focuses on advanced energy storage solutions, including solid-state batteries and supercapacitors, through Horizon Europe projects. Previously, he was a research fellow at the Technical University of Munich, applying AI to optimize power systems. With over 100 peer-reviewed publications and approximately $20 million in research funding, Dr. Kamal collaborates globally on transformative projects. His contributions drive innovation in sustainable energy, positioning him as a leader in the field. Dr. Kamal's exceptional contributions to the field have positioned him as a global leader in sustainable energy innovation, inspiring both the academic and industrial communities in their pursuit of a cleaner, smarter energy future."
+                },
+                'Monica Siroux': {
+                    biography: 'Prof. Monica Siroux is Full Professor at INSA Strasbourg (National Institute of Applied Sciences) and ICube Laboratory of University of Strasbourg France. She received her PhD in 1996 from the University Paris XII and the Accreditation to supervise research in 2008 from University of Valenciennes. Between 2013-2019 Professor Siroux was Director of the Energy Department at INSA Strasbourg and Director of a Research Chair "Innovative Walls”. She leads a group of researchers and PhD students. Her main areas of research are Energy efficiency and Renewable energy. Professor Siroux published over 100 research papers in refereed international journals and international conferences and supervised over 15 PhD students. She chaired numerous international and national conferences and technical meetings.'
+                },
+                'Lahoucine Atourki': {
+                    biography: 'Dr. Lahoucine Atourki is an Associate Professor and the head of the MANAPSE Lab at Mohammed V University in Rabat, Morocco, specializing in materials for energy and water systems. He earned his PhD from Ibn Zohr University in Morocco in collaboration with the Polytechnic University of Valencia, focusing on nanostructured oxides and perovskite thin films for emerging solar cells. He completed a postdoctoral fellowship at the Georgia Institute of Technology, where he worked on 2D materials to enhance the stability of perovskite-based solar cells. Prof. Atourki and his team focus on the synthesis of earth-abundant materials for various applications, including solar cells, photoelectrochemical cells, and atmospheric water harvesting. He serves as the president of the Scientific Morocco Association, dedicated to science education and climate change adaptation. He is also a member of the African Materials Research Society (A-MRS) and the Moroccan Association of Crystallography (AMC).'
+                }
+            };
+
+            readMoreBtns.forEach(btn => {
+                btn.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const name = this.getAttribute('data-name');
+                    const university = this.getAttribute('data-university');
+                    const country = this.getAttribute('data-country');
+                    const image = this.getAttribute('data-image');
+
+                    // Set popup content
+                    popupImage.style.backgroundImage = `url('${image}')`;
+                    popupTitle.textContent = name;
+                    popupSubtitle.textContent = `${university}, ${country}`;
+                    
+                    // Set biography from predefined object
+                    const speakerInfo = speakerBios[name];
+                    biographyText.textContent = speakerInfo.biography;
+                    
+
+                    // Show popup
+                    popupOverlay.style.display = 'flex';
+                });
+            });
+
+            popupClose.addEventListener('click', function() {
+                popupOverlay.style.display = 'none';
+            });
+
+            popupOverlay.addEventListener('click', function(event) {
+                if (event.target === popupOverlay) {
+                    popupOverlay.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    
+
+    <!-- Scroll To Top -->
+    <a href="#main-banner" id="scrollToTop" class="scrolltop" title="Back To Top" style="display: none;"><i class="fas fa-angle-double-up"></i></a>
+    <!-- Scroll To Top End -->
+
+    <!-- Jquery JS Link -->
+    <script src="assets/js/jquery-3.5.1.min.js "></script>
+
+
+    <!-- Bootstrap JS Link -->
+    <script src="assets/js/bootstrap-4.5.2.min.js "></script>
+
+    <!-- Popper JS Link -->
+    <script src="assets/js/popper-1.16.0.min.js"></script>
+
+    <!-- Font Awsome JS Link -->
+    <script src="assets/js/font-awesome.min.js"></script>
+
+    <!-- Wow Animation JS Link -->
+    <script src="assets/js/wow.js "></script>
+
+    <!-- Slick Slider JS Link -->
+    <script src="assets/js/slick.min.js "></script>
+
+    <!-- Custom JS Link -->
+    <script src="assets/js/custom.js "></script>
+
+</body>
+
+</html>
